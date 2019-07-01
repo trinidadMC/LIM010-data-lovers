@@ -1,18 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <!-- <script src="./data/lol/lol.js"></script> -->
-    <!-- <script src="./data/pokemon/pokemon.js"></script> -->
-    <!-- <script src="./data/worldbank/worldbank.js"></script> -->
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<header>welcolme to poke-lovers</header>
+
+<body>
+  <!--PRIMERA INTERFAZ LLAMADA LOGING-->
+
+  <main>
+    <section id="loginbox" class="loginbox">
+      <form class="contenedor">
+        <section class="box2">
+          <p>correo electronico</p>
+          <input type="text" id="login" class="login">
+          <p>contraseña</p>
+          <input type="password" id="contraseña" clas="contraseña">
+          <p>¿olvidaste tu contraseña?</p>
+          <section id="error"></section>
+        </section>
+        <section class="boton1">
+          <button type="button" id="btn1" class="btn1">Ingresar</button>
+          <p>¿No tienes una cuenta?Registrate </p>
+        </section>
+      </form>
+    </section>
+    <!---SEGUNDA INTERFAZ POKEMON-->
+    <section id="interfaz2" class="cara2 hide">
+
+
+    </section>
+
+
+  </main>
+
+  <script src="./data/lol/lol.js"></script>
+  <script src="./data/pokemon/pokemon.js"></script>
+  <script src="./data/worldbank/worldbank.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+<footer></footer>
+
 </html>
