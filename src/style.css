@@ -23,7 +23,7 @@ a{
 }
 .box{
     margin: auto;
-    display: flex;
+    display: flex; 
     flex-flow: column wrap;
     align-content: center;
     width: 260px;
@@ -71,4 +71,7 @@ a{
 }
 .hide {
     display: none;
+}
+.interfaz2{
+    display: flex;
 }

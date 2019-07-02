@@ -1,4 +1,3 @@
-/* Manejo del DOM */
 /*DECLRANDO LOS BOTONES DEL LOGIN Y DAR(LE FUNCIONABILIDAD*/
 const loginbox = document.getElementById("loginbox");
 const login = document.getElementById("login");
@@ -22,6 +21,23 @@ buttonUno.addEventListener("click", () => {
   }
 });
 /*LLAMANDO A MI DATA POKEMON DESDE DATA JS */
+const contenedor = document.getElementById("contenedor");
+const pokemones = POKEMON.pokemon;
+const mostrardata = (pokemon) =>{
+let mostrar =' ';
+for( let i = 0; i < pokemon.length; i++) {
+  let llamar = `
+  <div>
+    <img src="${pokemon[i].img}"/>
+    <p>nombre=${pokemon[i].name}</p>
+  </div>`;
+  mostrar += llamar;
+}
+return mostrar;
+};
+contenedor.innerHTML = mostrardata(pokemones);
+
+
 
 
 
