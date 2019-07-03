@@ -90,7 +90,7 @@ text-align: center;
         margin: 10px;
 }
 .tipos{
-    background: rgb(248, 144, 25);
+    background: rgb(252, 12, 252);
     border-radius: 5px;
     border: 1px solid black;
     height: 41px;
@@ -103,4 +103,5 @@ text-align: center;
     justify-content:space-between;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
+
 }
