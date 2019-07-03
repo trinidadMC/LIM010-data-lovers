@@ -16,7 +16,7 @@ a{
 
 .loginbox{
     display: flex;
-    background: url(img/giphy.gif) no-repeat center top;                
+    background: url(data/img/giphy.gif) no-repeat center top;                
     background-size: cover;
     height: 100vh;
     
@@ -72,6 +72,35 @@ a{
 .hide {
     display: none;
 }
-.interfaz2{
+.cara2{
+    background: rgba(71, 250, 65, 0.46);           
+    background-size: cover;
+
+}
+.pokeimg{
+text-align: center;
+}
+.mostrar{
+        display: inline-block;
+        width: 394px;
+        border: 5px solid black;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        border-radius: 5px;
+        margin: 10px;
+}
+.tipos{
+    background: rgb(248, 144, 25);
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 41px;
+    width: 185px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+.botones{
     display: flex;
+    justify-content:space-between;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
 }
