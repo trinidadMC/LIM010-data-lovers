@@ -16,29 +16,32 @@
   <main>
     <section id="loginbox" class="loginbox">
       <form class="box">
-          <img class="logo-pokemon" src="./img/pokelovers.png" alt="logo">
-          <label class="user letra" for="">User</label>
-          <input type="text" id="login" class="data">
-          <label class="contra letra" for="">Password</label>
-          <input type="password" id="contraseña" class="data">
-          <a class="right letra" href="">¿Olvidaste tu cotraseña?</a>
-          <section id="error"></section>
-          <button type="button" id="btn1" class="btn-login center letra">INGRESA</button>
-          <p class="center letra">¿No tienes una cuenta? <a href="">Registrate</a> </p>
-          </form>
+        <img class="logo-pokemon" src="./data/img/pokelovers.png" alt="logo">
+        <label class="user letra" for="">User</label>
+        <input type="text" id="login" class="data">
+        <label class="contra letra" for="">Password</label>
+        <input type="password" id="contraseña" class="data">
+        <a class="right letra" href="">¿Olvidaste tu cotraseña?</a>
+        <section id="error"></section>
+        <button type="button" id="btn1" class="btn-login center letra">INGRESA</button>
+        <p class="center letra">¿No tienes una cuenta? <a href="">Registrate</a> </p>
+      </form>
     </section>
     <!---SEGUNDA INTERFAZ POKEMON-->
     <section id="interfaz2" class="cara2 hide">
-      <div id="contenedor"></div>   
-      <button id="fire" class="fire">firepokemon
-        <button id="ice" class="ice">icepokemon
-        <button id="fly" class="flying"> flyingpokemon
-        <button id="Psychic" class="Psychic">Psychicpokemon
-        <button id="Water" class="Water">Waterpokemon
-        <button id="Ground" class="Ground"> Groundpokemon
-        <button id="Rock" class="Rock">Rockpokemon
+      <section id ="botones" class="botones">
+      <button id="fire" class="fire tipos">firepokemon</button>
+      <button id="ice" class="ice tipos">icepokemon</button>
+      <button id="fly" class="flying tipos"> flyingpokemon</button>
+      <button id="Psychic" class="Psychic tipos">Psychicpokemon</button>
+      <button id="Water" class="Water tipos">Waterpokemon</button>
+      <button id="Ground" class="Ground tipos">Groundpokemon</button>
+      <button id="Rock" class="Rock tipos">Rockpokemon</button>
     </section>
-     </main>
+      <div id="contenedor" class="pokeimg"></div>
+
+    </section>
+  </main>
 
 
   <script src="./data/pokemon/pokemon.js"></script>
