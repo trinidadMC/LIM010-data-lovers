@@ -73,7 +73,7 @@ a{
     display: none;
 }
 .cara2{
-    background: rgba(71, 250, 65, 0.46);           
+    background: rgb(255, 200, 1);           
     background-size: cover;
 
 }
@@ -81,34 +81,36 @@ a{
 text-align: center;
 }
 .mostrar{
+        background: #f6e5a7;
         display: inline-block;
-        width: 394px;
-        border: 5px solid black;
+        width: 250px;
+        border: 2px solid #f6e5a7;
         font-family: 'Open Sans', sans-serif;
         font-weight: bold;
         border-radius: 5px;
         margin: 10px;
 }
 .selecionar{
-    background: rgb(252, 12, 252);
+    text-align: center;
+    font-size: 16px;
+    background: #f6e5a7;;
     border-radius: 5px;
-    border: 1px solid black;
+    border:  solid #f6e5a7;;
     height: 41px;
     width: 185px;
     font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
+    
 }
 .cajabotones{
-    background:url(img/cara2.1.jpg)no-repeat center top;
-    background-size: cover;
+    background:url(img/fondopoke.jpg)no-repeat center top;
+    background-size: contain;
     width: 100%;
-    height: 650px;
+    height:1000px;
     display: flex;
-    justify-content: center;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-end;
     font-family: 'Open Sans', sans-serif;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 1px solid #ffc801;
 
 }
