@@ -32,6 +32,8 @@ const mostrardata = (pokemon) => {
       <p>${pokemon[i].name}</p>
       <p>${pokemon[i].num}</p>
       <P>${pokemon[i].type}</p>
+      <P>${pokemon[i].spawn_chance}</p>
+      <P>${pokemon[i].weaknesses}</p>
     </div>`;
     mostrar += llamar;
   }
@@ -39,9 +41,8 @@ const mostrardata = (pokemon) => {
 };
 contenedor.innerHTML = mostrardata(pokemones)
 
-/*DECLARANDO BOTONES DE ORGANIZAR POR TIPOS*/
+/*FUNCIONABILDAD DE LOS POKEMONES POR ORDEN DE LA A-Z */
 const ordenaz = document.getElementById("ordenAZ");
-
 const ordenaAZ = () => {
   nombrePokemones = [];
   const ordenador = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "W", "X", "Y", "Z"];
@@ -58,18 +59,46 @@ const ordenaAZ = () => {
 ordenaz.addEventListener('change', () => {
   if ('A-Z' === ordenaz.value) {
     const ordenar = ordenaAZ();
-    
+
     contenedor.innerHTML = mostrardata(ordenar);
   }
 });
+/*FUNCIONABILIDAD POR ORDEN DE LA Z-A*/
+const ordenaZA = () => {
+  pokemonesnombre = [];
+  const desordenar = ['Z', 'Y', 'X', 'W', 'V', 'U', 'T', 'S', 'R', 'Q', 'P', 'O', 'N', 'M', 'L', 'K', 'J', 'I', 'H', 'G', 'F', 'E', 'D', 'C', 'B', 'A'];
+  for (let a = 0; a < desordenar.length; a++) {
+    for (let b = 0; b < pokemones.length; b++) {
+      if (desordenar[a] === pokemones[b].name[0]) {
+        pokemonesnombre.push(pokemones[b]);
+      };
+    }
+  } return pokemonesnombre;
+};
+ordenaz.addEventListener('change', () => {
+  if ('Z-A' === ordenaz.value) {
+    const desord = ordenaZA();
+    contenedor.innerHTML = mostrardata(desord);
+  }
+});
+/*HACIENOD LAS FUNCIONABILIDADA DE LOS POKEMONES POR TIPOS*/
 
-
-
-
-
-
-
-
-
-
+const Tipos = document.getElementById("Tipos");
+const tipado = () => {
+  poketipado = [];
+  const poketypos = ['Grass', 'Poison', 'Fire', 'ice', 'flying', 'Psychic', 'Water', 'Ground', 'Rock', 'Electric', 'Bug', 'Ghost', 'Dark', 'Fighthing', 'Fairy', 'Normal', 'Dragon', 'Steel'];
+  for (let i = 0; i < poketypos.length; i++) {
+    for (let o = 0; o < pokemones.length; o++) {
+    if (poketypos[i] === pokemones[o].type[0]) {
+      return poketipado.push(pokemones[o]);
+    }
+  } 
+}return poketipado;
+};
+Tipos.addEventListener('change',() =>{
+  if('Grass'=== Tipos.value){
+    const tips = tipado();
+    contenedor.innerHTML = mostrardata(tips);
+  };
+});
 
