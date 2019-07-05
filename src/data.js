@@ -4,11 +4,12 @@ const datapokemon = (pokemon) => {
   vacio.push({
     img:pokemon[i].img,
     nombre: pokemon[i].name,
+    numero: pokemon[i].num,
   });
   return vacio;
 };
-
 window.pokemon= {
   datapokemon: datapokemon,
 };
+
 
