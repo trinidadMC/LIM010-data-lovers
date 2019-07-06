@@ -73,3 +73,39 @@ ordenascend.addEventListener('change' , () => {
   contenedor.innerHTML = mostrardata(ordenpoder(pokemones,ordenascend.value));
 
 });
+
+/* Funcion de mostrar pokemones*/
+const mostrarPokemones = (arrayPokemones) => {
+  contenedor.innerHTML = '';
+  for (let i = 0; i < arrayPokemones.length; i++) {
+    const num = arrayPokemones[i].num;
+    const id = arrayPokemones[i].id;
+    const nombre = arrayPokemones[i].name;
+    const imagen = arrayPokemones[i].img;
+    contenedor.innerHTML += `
+    <div class='poke' name='pokemon' id=${id}>
+    <p> ${num} </p>
+    <p> ${nombre} </p>
+    <img src="${imagen}"/>
+    </div>`;
+  }
+};
+
+const contenedor1 = document.getElementById('contenedor1');
+contenedor1.addEventListener('click', () => {
+  const poke = event.target.parentElement.id - 1;
+  if (event.target.parentElement.getAttribute('name') === 'pokemon') {
+    document.getElementById('modalventana').classList.remove('hide');
+    document.getElementById('modal-info').innerHTML = `
+  <p>Nombre:  ${POKEMON.pokemon[poke].name}</p>
+  <p>Peso: ${POKEMON.pokemon[poke].weight}   </p> 
+  <p>Altura: ${POKEMON.pokemon[poke].height}</p>    
+  <p>Tipo: ${POKEMON.pokemon[poke].type}</p> `;
+  }
+});
+
+
+
+document.getElementById('cerrar').addEventListener('click', () => {
+  document.getElementById('modalventana').classList.add('hide');
+});

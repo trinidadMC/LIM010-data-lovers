@@ -63,7 +63,7 @@
           <option value="Poison">Poison &#128126;</option>
           <option value="Fire">Fire &#127879;</option>
           <option value="Normal">Normal &#128304;</option>
-          <optio value="Psychic">Psychic &#128302;</option>
+          <option value="Psychic">Psychic &#128302;</option>
           <option value="Dragon">Dragon &#128009;</option>
           <option value="Electric">Electric &#128165;</option>
           <option value="Ice">Ice &#128142;</option>
@@ -74,13 +74,25 @@
           <option value="Ghost">Ghost &#128123;</option>
           <option value="Flying">Flying &#128168;</option>
         </select>
+        <select id="egg" class="selecionar"> 
+          <option>Huevos</option>
+          <option value="2km">2km</option>
+          <option value="5km">5km</option>
+          <option value="10km">10km</option>
+        </select>
       </div>
       <div id="contenedor" class="pokeimg"></div>
-    </section>
-    <!-- PANTALLA 3-->
-    <section id="pantalla3" class="pantalla3 hide"> pantalla 3</section>
 
-  </main>
+      <div id="contenedor1"></div>
+      <div id="modalventana" class="modal hide">
+        <div class="modalcontenido">
+          <section class="cerrar" id="cerrar">&times;</section>
+          <p>Informacion de Pokemon</p>
+          <div class="modal-info" id="modal-info">
+          </div>
+        </div>
+      </div>
+   </main>
 
 
   <script src="./data/pokemon/pokemon.js"></script>
