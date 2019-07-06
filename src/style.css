@@ -81,31 +81,30 @@ a{
 text-align: center;
 }
 .mostrar{
-        background: #f6e5a7;
+
+        background: #ffe585;
         display: inline-block;
         width: 250px;
-        border: 2px solid #f6e5a7;
+        border: 2px solid #ffe585;
         font-family: 'Open Sans', sans-serif;
         font-weight: bold;
         border-radius: 5px;
         margin: 10px;
 }
 .selecionar{
-    text-align: center;
-    font-size: 16px;
-    background: #f6e5a7;;
+    font-size: 14px;;
+    background: #ffc801;;
     border-radius: 5px;
-    border:  solid #f6e5a7;;
+    border:  solid #000000;;
     height: 41px;
-    width: 185px;
+    width: 230px;
     font-family: 'Open Sans', sans-serif;
     
 }
 .cajabotones{
     background:url(img/fondopoke.jpg)no-repeat center top;
-    background-size: contain;
     width: 100%;
-    height:1000px;
+    height:850px;
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
