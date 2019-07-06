@@ -64,12 +64,14 @@ contenedor.innerHTML= mostrardata(pokedebilidades(pokemones,porweakness.value));
 Tipos.addEventListener('change', () => {
   contenedor.innerHTML= mostrardata(poketypos(pokemones,Tipos.value));
   });
-// asc y desc
- // const newarray = mostrardata(window.pokemon.ordenpoder(pokemones,sorAsc.value));
+
+  /*ESTOS SON MIS ERRORES*/
+// const newarray = mostrardata(window.pokemon.ordenpoder(pokemones,sorAsc.value));
+// const NewOrden = ordenpoder(pokemones,ordenascend.value);
+// contenedor.innerHTML = mostrardata(NewOrden);
+/*ORDENANDO LOS POKEMONES DE MANERA ASCENDENTE Y DESCENDENTE*/
 const ordenascend = document.getElementById('porspawn');
 ordenascend.addEventListener('change' , () => {
-  // const NewOrden = ordenpoder(pokemones,ordenascend.value);
-  // contenedor.innerHTML = mostrardata(NewOrden);
   contenedor.innerHTML = mostrardata(ordenpoder(pokemones,ordenascend.value));
 
 });
