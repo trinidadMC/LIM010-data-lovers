@@ -33,6 +33,7 @@ const mostrardata = (pokemon) => {
       <p>${pokemon[i].num}</p>
       <P>${pokemon[i].type}</p>
       <P>${pokemon[i].spawn_chance}</p>
+      <P>${pokemon[i].weaknesses}</p>
     </div>`;
     mostrar += llamar;
   }
@@ -55,11 +56,14 @@ ordenaz.addEventListener('change', () => {
     contenedor.innerHTML = mostrardata(desord);
   }
 });
-/*HACIENOD LAS FUNCIONABILIDADA DE LOS POKEMONES POR TIPOS*/
-Tipos.addEventListener('change', () => {
-contenedor.innerHTML= mostrardata(poketypos(pokemones,Tipos.value));
+/*HACIENOD LAS FUNCIONABILIDADA DE LOS POKEMONES POR DEBILIDADES*/
+porweakness.addEventListener('change', () => {
+contenedor.innerHTML= mostrardata(pokedebilidades(pokemones,porweakness.value));
 });
-
+/*HACIENOD LAS FUNCIONABILIDAD DE LOS POKEMONES POR TIPOS*/
+Tipos.addEventListener('change', () => {
+  contenedor.innerHTML= mostrardata(poketypos(pokemones,Tipos.value));
+  });
 // asc y desc
  // const newarray = mostrardata(window.pokemon.ordenpoder(pokemones,sorAsc.value));
 const ordenascend = document.getElementById('porspawn');

@@ -1,5 +1,5 @@
 
-/*TRAENDO LOS POKEMONES DE LA DATA*/
+/*TRAYENDO LOS POKEMONES DE LA DATA*/
 const datapokemon = (pokemon) => {
   const vacio = [];
   for (let i =0; i < pokemon.lenght;i++);
@@ -62,14 +62,23 @@ const poketypos = (pokemones,tiposp ) => {
      }
      return 0;
     }
+
+    /*FILTRANNDO LOS POKEMONES POR DEBILIDADES*/
+    const pokedebilidades = (pokemones,debilidadesp) => {
+      return pokemones.filter((element)=>{
+      return element.weaknesses.indexOf(debilidadesp) > -1
+      });
+    };
+
     window.pokemon= {
       datapokemon: datapokemon,
       ordenaz: ordenaz,
       ordenaZA: ordenaZA,
       ordenpoder:ordenpoder,
-      poketypos: poketypos
+      poketypos: poketypos,
+      pokedebilidades: pokedebilidades
     };
-
+    
 
 
 
