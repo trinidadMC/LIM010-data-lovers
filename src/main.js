@@ -64,14 +64,12 @@ contenedor.innerHTML= mostrardata(pokedebilidades(pokemones,porweakness.value));
 Tipos.addEventListener('change', () => {
   contenedor.innerHTML= mostrardata(poketypos(pokemones,Tipos.value));
   });
-
-  /*ESTOS SON MIS ERRORES*/
-// const newarray = mostrardata(window.pokemon.ordenpoder(pokemones,sorAsc.value));
-// const NewOrden = ordenpoder(pokemones,ordenascend.value);
-// contenedor.innerHTML = mostrardata(NewOrden);
-/*ORDENANDO LOS POKEMONES DE MANERA ASCENDENTE Y DESCENDENTE*/
+// asc y desc
+ // const newarray = mostrardata(window.pokemon.ordenpoder(pokemones,sorAsc.value));
 const ordenascend = document.getElementById('porspawn');
 ordenascend.addEventListener('change' , () => {
+  // const NewOrden = ordenpoder(pokemones,ordenascend.value);
+  // contenedor.innerHTML = mostrardata(NewOrden);
   contenedor.innerHTML = mostrardata(ordenpoder(pokemones,ordenascend.value));
 
 });
@@ -95,14 +93,14 @@ const mostrarPokemones = (arrayPokemones) => {
 
 const contenedor1 = document.getElementById('contenedor1');
 contenedor1.addEventListener('click', () => {
-  const poke = event.target.parentElement.id - 1;
+  const pokecito = event.target.parentElement.id - 1;
   if (event.target.parentElement.getAttribute('name') === 'pokemon') {
     document.getElementById('modalventana').classList.remove('hide');
     document.getElementById('modal-info').innerHTML = `
-  <p>Nombre:  ${POKEMON.pokemon[poke].name}</p>
-  <p>Peso: ${POKEMON.pokemon[poke].weight}   </p> 
-  <p>Altura: ${POKEMON.pokemon[poke].height}</p>    
-  <p>Tipo: ${POKEMON.pokemon[poke].type}</p> `;
+  <p>Nombre:  ${POKEMON.pokemon[pokecito].name}</p>
+  <p>Peso: ${POKEMON.pokemon[pokecito].weight}   </p> 
+  <p>Altura: ${POKEMON.pokemon[pokecito].height}</p>    
+  <p>Tipo: ${POKEMON.pokemon[pokecito].type}</p> `;
   }
 });
 
