@@ -89,20 +89,20 @@ Puedes arreglar esto proporcionando una función de comparación*/
       });
     };
 
-    //  /*FILTRANDO POR HUEVOS*/
-    //   const filterEgg = (data, kms) => {
-    //    let egg = [];
-    //    if (kms === '2 km') {
-    //      egg = data.filter(pokemon => (pokemon.egg === '2 km'));
-    //    } else if (kms === '5 km') {
-    //      egg = data.filter(pokemon => (pokemon.egg === '5 km'));
-    //    } else if (kms === '10 km') {
-    //      egg = data.filter(pokemon => (pokemon.egg === '10 km'));
-    //    } else if (kms === 'Not in Eggs') {
-    //      egg = data.filter(pokemon => (pokemon.egg === 'Not in Eggs'));
-    //    }
-    //    return egg;
-    //  };
+      // /*FILTRANDO POR HUEVOS*/
+      //  const filterEgg = (data, kms) => {
+      //   let egg = [];
+      //   if (kms === '2 km') {
+      //     egg = data.filter(pokemon => (pokemon.egg === '2 km'));
+      //   } else if (kms === '5 km') {
+      //     egg = data.filter(pokemon => (pokemon.egg === '5 km'));
+      //   } else if (kms === '10 km') {
+      //     egg = data.filter(pokemon => (pokemon.egg === '10 km'));
+      //   } else if (kms === 'Not in Eggs') {
+      //     egg = data.filter(pokemon => (pokemon.egg === 'Not in Eggs'));
+      //   }
+      //   return egg;
+      // };
     
 
     window.pokemon= {

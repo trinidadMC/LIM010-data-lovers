@@ -27,7 +27,7 @@ const mostrardata = (pokemon) => {
   let mostrar = ' ';
   for (let i = 0; i < pokemon.length; i++) {
     let llamar = `
-    <div class='mostrar'>
+    <div class='mostrar' name='pokemon' id=${pokemon[i].id}>
       <img src="${pokemon[i].img}"/>
       <p>${pokemon[i].name}</p>
       <p>${pokemon[i].num}</p>
@@ -91,19 +91,18 @@ const mostrarPokemones = (arrayPokemones) => {
   }
 };
 
-const contenedor1 = document.getElementById('contenedor1');
-contenedor1.addEventListener('click', () => {
-  const pokecito = event.target.parentElement.id - 1;
-  if (event.target.parentElement.getAttribute('name') === 'pokemon') {
+const infopoke = document.getElementById('infopoke');
+contenedor.addEventListener('click', () => {
+  const pokecito = event.target.parentElement.getAttribute('id') - 1;{
     document.getElementById('modalventana').classList.remove('hide');
     document.getElementById('modal-info').innerHTML = `
-  <p>Nombre:  ${POKEMON.pokemon[pokecito].name}</p>
-  <p>Peso: ${POKEMON.pokemon[pokecito].weight}   </p> 
-  <p>Altura: ${POKEMON.pokemon[pokecito].height}</p>    
-  <p>Tipo: ${POKEMON.pokemon[pokecito].type}</p> `;
+    <img src="${POKEMON.pokemon[pokecito].img}"/>
+    <p> Nombre:  ${POKEMON.pokemon[pokecito].name}</p>
+    <p>Peso: ${POKEMON.pokemon[pokecito].weight}</p> 
+    <p>Altura: ${POKEMON.pokemon[pokecito].height}</p>    
+    <p>Tipo: ${POKEMON.pokemon[pokecito].type}</p> `;
   }
 });
-
 
 
 document.getElementById('cerrar').addEventListener('click', () => {
