@@ -11,9 +11,7 @@ const datapokemon = (pokemon) => {
   });
   return vacio;
 };
-window.pokemon= {
-  datapokemon: datapokemon,
-};
+
 /*ORDENANDO LOS POKEMONES DE LA A-Z*/
 const ordenaz = document.getElementById("ordenAZ");
 const ordenaAZ = () => {
@@ -29,9 +27,6 @@ const ordenaAZ = () => {
 
   } return nombrePokemones;
 };
-window.pokemon={
-  datapokemon:datapokemon,
-};
 /*ORDENANDO LOS POKEMONES DE LA Z-A*/
 const ordenaZA = () => {
   pokemonesnombre = [];
@@ -44,18 +39,36 @@ const ordenaZA = () => {
     }
   } return pokemonesnombre;
 };
-window.pokemon={
-  datapokemon: datapokemon,
-};
 /*FILTRANNDO LOS POKEMONES POR TIPOS*/
 const poketypos = (pokemones,tiposp ) => {
   return pokemones.filter((element)=>{
   return element.type.indexOf(tiposp) > -1
   });
 };
-window.pokemon ={
-  poketypos: poketypos
-};
+ const ordenpoder= (datapoke, clickOrder) => {
+   const arrSorpokemon = datapoke.sort((ab, bc) => {
+       if (ab.avg_spawns > bc.avg_spawns) {
+         return 1;
+       } if (ab.avg_spawns < bc.avg_spawns) {
+         return -1;
+       }
+       return 0;
+     });
+     if (clickOrder === '0') {
+       return arrSorpokemon;
+     }
+     if (clickOrder === '1') {
+       return arrSorpokemon.reverse();
+     }
+     return 0;
+    }
+    window.pokemon= {
+      datapokemon: datapokemon,
+      ordenaz: ordenaz,
+      ordenaZA: ordenaZA,
+      ordenpoder:ordenpoder,
+      poketypos: poketypos
+    };
 
 
 

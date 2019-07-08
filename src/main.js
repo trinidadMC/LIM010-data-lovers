@@ -57,5 +57,15 @@ ordenaz.addEventListener('change', () => {
 });
 /*HACIENOD LAS FUNCIONABILIDADA DE LOS POKEMONES POR TIPOS*/
 Tipos.addEventListener('change', () => {
-contenedor.innerHTML= mostrardata(window.pokemon.poketypos(pokemones,Tipos.value));
+contenedor.innerHTML= mostrardata(poketypos(pokemones,Tipos.value));
+});
+
+// asc y desc
+ // const newarray = mostrardata(window.pokemon.ordenpoder(pokemones,sorAsc.value));
+const ordenascend = document.getElementById('porspawn');
+ordenascend.addEventListener('change' , () => {
+  // const NewOrden = ordenpoder(pokemones,ordenascend.value);
+  // contenedor.innerHTML = mostrardata(NewOrden);
+  contenedor.innerHTML = mostrardata(ordenpoder(pokemones,ordenascend.value));
+
 });
