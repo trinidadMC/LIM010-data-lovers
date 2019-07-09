@@ -18,9 +18,9 @@
       <form class="box">
         <img class="logo-pokemon" src="./img/pokelovers.png" alt="logo">
         <label class="user letra" for="">User</label>
-        <input type="text" id="login" class="data">
+        <input type="text" id="login" class="data" value="LABORATORIA">
         <label class="contra letra" for="">Password</label>
-        <input type="password" id="contraseña" class="data">
+        <input type="password" id="contraseña" class="data" value="LABORATORIA">
         <a class="right letra" href="">¿Olvidaste tu cotraseña?</a>
         <section id="error"></section>
         <button type="button" id="btn1" class="btn-login center letra">INGRESA</button>
@@ -38,7 +38,6 @@
           <option value="Normal">Normal</option>
           <optio value="Psychic">Psychic</option>
             <option value="Dragon">Dragon</option>
-            <option value="Fighthing">Fighthing</option>
             <option value="Electric">Electric</option>
             <option value="Ice">Ice</option>
             <option value="Rock">Rock</option>
@@ -46,17 +45,17 @@
             <option value="Ground">Ground</option>
             <option value="Water">Water</option>
             <option value="Ghost">Ghost</option>
-            <option value="Dark">Dark</option>
-            <option Fairy ="Fairy"></option>
-            <option value="Steel">Steel</option>
             <option value="Flying">Flying</option>
         </select>
         <select id="ordenAZ" class="selecionar">
           <option value="Ordenar por">Ordena por</option>
           <option>A-Z</option>
           <option>Z-A</option>
-          <option>MenoraMayor</option>
-          <option>MayoraMenor</option>
+        </select>
+         <select id="porspawn" class="selecionar"> 
+          <option>ordenaporM-N</option>
+          <option value="0">MenoraMayor</option>
+          <option value="1">MayoraMenor</option>
         </select>
       </div>
       <div id="contenedor" class="pokeimg"></div>
