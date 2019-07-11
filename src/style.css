@@ -92,13 +92,14 @@ text-align: center;
         margin: 10px;
 }
 .selecionar{
-    font-size: 14px;;
-    background: #ffc801;;
+    font-size: 17px;
+    background: rgba(255, 255, 203, 0.85);
     border-radius: 5px;
-    border:  solid #000000;;
     height: 41px;
     width: 230px;
     font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-align: center;
     
 }
 .cajabotones{
@@ -126,10 +127,9 @@ text-align: center;
 
   }
   .modalcontenido {
-    font-size: 15px;
     margin: 30% auto;
     padding: 20px;
-    border: 2px solid #000;
+    border-radius: 32px;
     width: 70%;
     background-image: url(img/pokebolas.jpg);
     background-repeat: no-repeat;
@@ -145,24 +145,25 @@ text-align: center;
         height: 29%;
         margin: -10px;
     }
-    .pokedex{
-    font-size: 14px;
-    flex-flow: unset;
-    align-content: end;
+    .pokeke {
+    font-weight: bold;
+    color: ghostwhite;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 5px;
+    border: 1px solid #49820d;
+    background: #45860c;
+    width: 476px;
+    height: 22.4px;
     display: flex;
-    background: #92f392;
-    border-radius: 1px;
-    border: solid #000000;
-    height: 33px;
-    width: 230px;
-    font-family: 'Open Sans', sans-serif
+    justify-content: center;
+    padding: 0px;
 }
     
   .cerrar {
-    color: #050000;
-    float: left;
+    color: white;
+    float: right;
     font-size: 50px;
-    cursor: pointer;
+    cursor: pointer
   }
   
   .cerrar:hover .cerrar:focus {

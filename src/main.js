@@ -78,15 +78,16 @@ ordenascend.addEventListener('change' , () => {
 const mostrarPokemones = (arrayPokemones) => {
   contenedor.innerHTML = '';
   for (let i = 0; i < arrayPokemones.length; i++) {
-    const num = arrayPokemones[i].num;
+    const numero = arrayPokemones[i].num;
     const id = arrayPokemones[i].id;
     const nombre = arrayPokemones[i].name;
     const imagen = arrayPokemones[i].img;
     contenedor.innerHTML += `
     <div class='poke' name='pokemon' id=${id}>
-    <p> ${num} </p>
+    <p> ${numero} </p>
     <p> ${nombre} </p>
     <img src="${imagen}"/>
+    <p>${id}</p>
     </div>`;
   }
 };
@@ -97,14 +98,20 @@ contenedor.addEventListener('click', () => {
     document.getElementById('modalventana').classList.remove('hide');
     document.getElementById('modal-info').innerHTML = `
     <img src="${POKEMON.pokemon[pokecito].img}"/>
-    <p> Nombre:  ${POKEMON.pokemon[pokecito].name}</p>
-    <p>Peso: ${POKEMON.pokemon[pokecito].weight}</p> 
-    <p>Altura: ${POKEMON.pokemon[pokecito].height}</p>    
-    <p>Tipo: ${POKEMON.pokemon[pokecito].type}</p> `;
+    <p class="pokeke"> Nombre: ${POKEMON.pokemon[pokecito].name}</p>
+    <p class="pokeke">Peso: ${POKEMON.pokemon[pokecito].weight}</p> 
+    <p class="pokeke">Altura: ${POKEMON.pokemon[pokecito].height}</p>    
+    <p class="pokeke">Tipo: ${POKEMON.pokemon[pokecito].type}</p>
+    <p class="pokeke">Apariciones: ${POKEMON.pokemon[pokecito].avg_spawns}</p>
+    <p class="pokeke"> Debilidades:  ${POKEMON.pokemon[pokecito].weaknesses}</p>
+     `;
   }
 });
-
-
 document.getElementById('cerrar').addEventListener('click', () => {
   document.getElementById('modalventana').classList.add('hide');
+});
+/*FUNCIONABILIDAD DE LOS HUEVOS*/
+const pokehuevos=document.getElementById("pokeegs");
+pokehuevos.addEventListener('change' , () => {
+contenedor.innerHTML = mostrardata(eggpoke(pokemones,pokehuevos.value));
 });

@@ -88,8 +88,16 @@ Puedes arreglar esto proporcionando una función de comparación*/
       return element.weaknesses.indexOf(debilidadesp) > -1
       });
     };
+    /*FILTRANDO POR HUEVOS*/
+    const eggpoke = (pokemones,eggs) => {
+      return pokemones.filter((element)=>{
+        console.log(eggpoke);
+      return element.egg.indexOf(eggs) > -1
+      });
+    };
+    
 
-      // /*FILTRANDO POR HUEVOS*/
+      // 
       //  const filterEgg = (data, kms) => {
       //   let egg = [];
       //   if (kms === '2 km') {
@@ -106,7 +114,7 @@ Puedes arreglar esto proporcionando una función de comparación*/
     
 
     window.pokemon= {
-      //filterEgg = filterEgg,
+      eggpoke: eggpoke,
       datapokemon: datapokemon,
       ordenaz: ordenaz,
       ordenaZA: ordenaZA,
