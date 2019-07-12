@@ -66,10 +66,10 @@ Tipos.addEventListener('change', () => {
   });
 // asc y desc
  // const newarray = mostrardata(window.pokemon.ordenpoder(pokemones,sorAsc.value));
-const ordenascend = document.getElementById('porspawn');
-ordenascend.addEventListener('change' , () => {
   // const NewOrden = ordenpoder(pokemones,ordenascend.value);
   // contenedor.innerHTML = mostrardata(NewOrden);
+const ordenascend = document.getElementById('porspawn');
+ordenascend.addEventListener('change' , () => {
   contenedor.innerHTML = mostrardata(ordenpoder(pokemones,ordenascend.value));
 
 });
@@ -91,27 +91,35 @@ const mostrarPokemones = (arrayPokemones) => {
     </div>`;
   }
 };
+/*FUNCIONABILIDAD DE LOS HUEVOS*/
+const pokehuevos=document.getElementById("pokeegs");
+pokehuevos.addEventListener('change' , () => {
+  contenedor.innerHTML= mostrardata(eclociones(pokemones,pokehuevos.value));
+
+  const totalCount = pokehuevos.length;
+  contenedor.innerHTML = 'Resultados Encontrados: ' + totalCount;
+ // html span promedio
+ const promedio = totalCount / 151 * 100;
+ contenedor.innerHTML = 'Porcentaje Total: ' + parseInt(promedio) + '%'; 
+});
 
 const infopoke = document.getElementById('infopoke');
 contenedor.addEventListener('click', () => {
   const pokecito = event.target.parentElement.getAttribute('id') - 1;{
     document.getElementById('modalventana').classList.remove('hide');
     document.getElementById('modal-info').innerHTML = `
-    <img src="${POKEMON.pokemon[pokecito].img}"/>
+    <img src='${POKEMON.pokemon[pokecito].img}'/>
     <p class="pokeke"> Nombre: ${POKEMON.pokemon[pokecito].name}</p>
     <p class="pokeke">Peso: ${POKEMON.pokemon[pokecito].weight}</p> 
     <p class="pokeke">Altura: ${POKEMON.pokemon[pokecito].height}</p>    
     <p class="pokeke">Tipo: ${POKEMON.pokemon[pokecito].type}</p>
     <p class="pokeke">Apariciones: ${POKEMON.pokemon[pokecito].avg_spawns}</p>
     <p class="pokeke"> Debilidades:  ${POKEMON.pokemon[pokecito].weaknesses}</p>
+    <p class="pokeke"> Spawn Time:  ${POKEMON.pokemon[pokecito].spawn_time}</p>
      `;
   }
 });
 document.getElementById('cerrar').addEventListener('click', () => {
   document.getElementById('modalventana').classList.add('hide');
 });
-/*FUNCIONABILIDAD DE LOS HUEVOS*/
-const pokehuevos=document.getElementById("pokeegs");
-pokehuevos.addEventListener('change' , () => {
-contenedor.innerHTML = mostrardata(eggpoke(pokemones,pokehuevos.value));
-});
+

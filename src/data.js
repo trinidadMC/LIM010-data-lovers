@@ -51,7 +51,7 @@ Nota: el filtro () no cambia la matriz original.*/
  y especifica un valor para ser devuelto a quien llama a la función.)*/
 const poketypos = (pokemones,tiposp ) => {
   return pokemones.filter((element)=>{
-  return element.type.indexOf(tiposp) > -1
+  return element.type.indexOf(tiposp) > -1;
   });
 };
 
@@ -85,42 +85,39 @@ Puedes arreglar esto proporcionando una función de comparación*/
     /*FILTRANNDO LOS POKEMONES POR DEBILIDADES*/
     const pokedebilidades = (pokemones,debilidadesp) => {
       return pokemones.filter((element)=>{
-      return element.weaknesses.indexOf(debilidadesp) > -1
+      return element.weaknesses.indexOf(debilidadesp) > -1;
       });
     };
-    /*FILTRANDO POR HUEVOS*/
-    const eggpoke = (pokemones,eggs) => {
-      return pokemones.filter((element)=>{
-        console.log(eggpoke);
-      return element.egg.indexOf(eggs) > -1
+    const eclociones =(pokemones,huevos)=> {
+      return pokemones.filter((element) =>{
+      return element.egg.indexOf(huevos) > -1;
       });
     };
-    
-
-      // 
-      //  const filterEgg = (data, kms) => {
-      //   let egg = [];
-      //   if (kms === '2 km') {
-      //     egg = data.filter(pokemon => (pokemon.egg === '2 km'));
-      //   } else if (kms === '5 km') {
-      //     egg = data.filter(pokemon => (pokemon.egg === '5 km'));
-      //   } else if (kms === '10 km') {
-      //     egg = data.filter(pokemon => (pokemon.egg === '10 km'));
-      //   } else if (kms === 'Not in Eggs') {
-      //     egg = data.filter(pokemon => (pokemon.egg === 'Not in Eggs'));
-      //   }
-      //   return egg;
-      // };
+    console.log(eclociones);
+    /*FILTRANDO POR HUEVOS*/ 
+     /*const filterEgg = (data, kms) => {
+     let egg = [];
+     if (kms === '2 km') {
+     egg = data.filter(pokemon => (pokemon.egg === '2 km'));
+       } else if (kms === '5 km') {
+        egg = data.filter(pokemon => (pokemon.egg === '5 km'));
+        } else if (kms === '10 km') {
+          egg = data.filter(pokemon => (pokemon.egg === '10 km'));
+        } else if (kms === 'Not in Eggs') {
+           egg = data.filter(pokemon => (pokemon.egg === 'Not in Eggs'));
+        }
+        return egg;
+     };*/
     
 
     window.pokemon= {
-      eggpoke: eggpoke,
       datapokemon: datapokemon,
       ordenaz: ordenaz,
       ordenaZA: ordenaZA,
       ordenpoder:ordenpoder,
       poketypos: poketypos,
-      pokedebilidades: pokedebilidades
+      pokedebilidades: pokedebilidades,
+      eclociones: eclociones
     };
 
    
