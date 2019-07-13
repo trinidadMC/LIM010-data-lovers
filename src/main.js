@@ -97,19 +97,19 @@ pokehuevos.addEventListener('change' , () => {
   contenedor.innerHTML= mostrardata(eclociones(pokemones,pokehuevos.value));
 
   const totalCount = pokehuevos.length;
-  contenedor.innerHTML = 'Resultados Encontrados: ' + totalCount;
+  contenedor.innerHTML = 'Resultados Encontrados' + totalCount;
  // html span promedio
  const promedio = totalCount / 151 * 100;
- contenedor.innerHTML = 'Porcentaje Total: ' + parseInt(promedio) + '%'; 
+ contenedor.innerHTML = 'Porcentaje Total' + parseInt(promedio) + '%'; 
 });
 
 const infopoke = document.getElementById('infopoke');
 contenedor.addEventListener('click', () => {
-  const pokecito = event.target.parentElement.getAttribute('id') - 1;{
+  const pokecito = parseInt(event.target.parentElement.getAttribute('id')- 1);{
     document.getElementById('modalventana').classList.remove('hide');
     document.getElementById('modal-info').innerHTML = `
     <img src='${POKEMON.pokemon[pokecito].img}'/>
-    <p class="pokeke"> Nombre: ${POKEMON.pokemon[pokecito].name}</p>
+    <p class="pokeke">${POKEMON.pokemon[pokecito].name}</p>
     <p class="pokeke">Peso: ${POKEMON.pokemon[pokecito].weight}</p> 
     <p class="pokeke">Altura: ${POKEMON.pokemon[pokecito].height}</p>    
     <p class="pokeke">Tipo: ${POKEMON.pokemon[pokecito].type}</p>
