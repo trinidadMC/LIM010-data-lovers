@@ -127,16 +127,15 @@ a{
 
   }
   .modalcontenido {
-    margin: 30% auto;
-    padding: 20px;
+    margin: auto;
+    padding: 0px;
     border-radius: 32px;
-    width: 70%;
     background-image: url(img/pokebolas.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 474px;
-    height: 53%;
-    text-align: center;
+    width: 580px;
+    height: 87%;
+    text-align: -webkit-center;
   }
 
     .imagenModal{
@@ -146,17 +145,19 @@ a{
         margin: -10px;
     }
     .pokeke {
-    font-weight: bold;
-    color: ghostwhite;
-    font-family: 'Open Sans', sans-serif;
-    border-radius: 5px;
-    border: 1px solid #49820d;
-    background: #45860c;
-    width: 476px;
-    height: 18.9px;
-    display: flex;
-    justify-content: center;
-    padding: 0px;
+       font-weight: bold;
+        color: ghostwhite;
+        font-family: 'Open Sans', sans-serif;
+        border-radius: 5px;
+        border: 0px solid #49820d;
+        background: #45860c;
+        width: 499px;
+        margin: 0px;
+        height: 31.2px;
+        display: flex;
+        justify-content: space-around;
+        align-content: flex-end;
+        padding: 0px
 }
     
   .cerrar {
