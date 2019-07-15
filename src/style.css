@@ -15,18 +15,19 @@ a{
 
 .loginbox{
     display: flex;
-    background: url(img/giphy.gif) no-repeat center top;                
+    background: url(img/giphy.gif) no-repeat center top;
+    background: center;
     background-size: cover;
     height: 100vh;
     
 }
 .box{
     margin: auto;
-    display: flex; 
+    display: flex;
     flex-flow: column wrap;
     align-content: center;
     width: 260px;
-    padding: 50px;
+    padding: 20px;
     background: rgba(248, 246, 246, 0.623);
     border-radius: 4px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, .50);
@@ -72,51 +73,56 @@ a{
     display: none;
 }
 
+/* desde aqui mi cara2 */
+
 .cara2{
-    background: rgb(255, 200, 1);           
-    background-size: cover;
-}
-.pokeimg{
-    text-align: center;
-    background-color: #ff9700;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background: #ff7300;            
 }
 .mostrar{
+    background: #ffe585;
+    display: block;
+    width: 158px;
+    height: 207px;
+    border: 2px solid #ffe585;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 13px;
+    padding: 10px;
+}  
+img.sizeimg {
+    width: 91px;
+    height: 90px;
+}
 
-        background: #ffe585;
-        display: inline-block;
-        width: 250px;
-        border: 2px solid #ffe585;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: bold;
-        border-radius: 5px;
-        margin: 10px;
+.titulito{
+    display: flex;
+    justify-content: flex-start;
+    width: 246px;
+    height: 133px;
 }
 .selecionar{
-    font-size: 17px;
+    font-size: 13px;
     background: rgba(255, 255, 203, 0.85);
     border-radius: 5px;
-    height: 41px;
-    width: 230px;
+    height: 25px;
+    width: 56px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     text-align: center;
-    
 }
-.cajabotones{
-    background: url(img/fondopoke.jpg)no-repeat;
-    width: 100%;
-    background-size: cover;
-    height: 850px;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+.pokeimg{
+    text-align: center;
     font-family: 'Open Sans', sans-serif;
-    border-radius: 5px;
-    border: 1px solid #ffc801
+    font-weight: bold;
 }
-
 .modal {
-
     position: fixed;
     top: 0;
     width: 100%; 
@@ -129,42 +135,52 @@ a{
   .modalcontenido {
     margin: auto;
     padding: 0px;
-    border-radius: 32px;
+    border-radius: 21px;
     background-image: url(img/pokebolas.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 580px;
-    height: 87%;
+    width: 679px;
+    height: 63%;
     text-align: -webkit-center;
   }
-
-    .imagenModal{
-        
-        width: 32%;
-        height: 29%;
-        margin: -10px;
-    }
-    .pokeke {
-       font-weight: bold;
-        color: ghostwhite;
-        font-family: 'Open Sans', sans-serif;
-        border-radius: 5px;
-        border: 0px solid #49820d;
-        background: #45860c;
-        width: 499px;
-        margin: 0px;
-        height: 31.2px;
-        display: flex;
-        justify-content: space-around;
-        align-content: flex-end;
-        padding: 0px
+  .pokeke {
+    font-weight: bold;
+    font-size: 18px;
+    color: ghostwhite;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 3px;
+    border: 0px solid #49820d;
+    background: #45860c;
+    width: 428px;
+    margin: 0px;
+    height: 33.2px;
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-end;
+    padding: 0px;
 }
-    
-  .cerrar {
+.imagenModal{
+        
+    width: 32%;
+    height: 29%;
+    margin: -10px;
+}
+.imagenpoke{
+    width: 212px;
+    justify-content: center;
+    align-items: center;
+}
+.logomodal{
+    display: flex;
+    justify-content: flex-start;
+    width: 315px;
+    height: 98px;
+}
+.cerrar {
     color: white;
     float: right;
-    font-size: 50px;
-    cursor: pointer
+    font-size: 84px;
+    cursor: pointer;
   }
   
   .cerrar:hover .cerrar:focus {

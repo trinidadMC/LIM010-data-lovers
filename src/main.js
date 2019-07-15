@@ -28,7 +28,7 @@ const mostrardata = (pokemon) => {
   for (let i = 0; i < pokemon.length; i++) {
     let llamar = `
     <div class='mostrar' name='pokemon' id=${pokemon[i].id}>
-      <img src="${pokemon[i].img}"/>
+      <img  class = "sizeimg" src="${pokemon[i].img}"/>
       <p>${pokemon[i].name}</p>
       <p>${pokemon[i].num}</p>
       <P>${pokemon[i].type}</p>
@@ -108,7 +108,7 @@ contenedor.addEventListener('click', () => {
   const pokecito = parseInt(event.target.parentElement.getAttribute('id')- 1);{
     document.getElementById('modalventana').classList.remove('hide');
     document.getElementById('modal-info').innerHTML = `
-    <img src='${POKEMON.pokemon[pokecito].img}'/>
+    <img  class="imagenpoke" src='${POKEMON.pokemon[pokecito].img}'/>
     <p class="pokeke">${POKEMON.pokemon[pokecito].name}</p>
     <p class="pokeke">Peso: ${POKEMON.pokemon[pokecito].weight}</p> 
     <p class="pokeke">Altura: ${POKEMON.pokemon[pokecito].height}</p>    
