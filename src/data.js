@@ -13,10 +13,10 @@ const datapokemon = (pokemon) => {
 };
 
 /*ORDENANDO LOS POKEMONES DE LA A-Z*/
-const ordenaz = document.getElementById("ordenAZ");
+const ordenaz = document.getElementById('ordenAZ');
 const ordenaAZ = () => {
   nombrePokemones = [];
-  const ordenador = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "W", "X", "Y", "Z"];
+  const ordenador = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'W', 'X', 'Y', 'Z'];
   for (let i = 0; i < ordenador.length; i++) {
     for (let Z = 0; Z < pokemones.length; Z++) {
       if (ordenador[i] === pokemones[Z].name[0]) {
@@ -59,8 +59,8 @@ const poketypos = (pokemones,tiposp ) => {
 /*El método sort () ordena una matriz alfabéticamente:*/
 /*The reverse() method reverses the elements in an array.*/
 /*Por defecto, la función sort () ordena los valores como cadenas.
-Sin embargo, si los números se ordenan como cadenas, "25" es más grande 
-que "100", porque "2" es más grande que "1".
+Sin embargo, si los números se ordenan como cadenas, '25' es más grande 
+que '100', porque '2' es más grande que '1'.
 Debido a esto, el método sort () producirá un resultado incorrecto al ordenar los números.
 Puedes arreglar esto proporcionando una función de comparación*/
 

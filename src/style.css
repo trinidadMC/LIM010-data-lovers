@@ -16,7 +16,6 @@ a{
 .loginbox{
     display: flex;
     background: url(img/giphy.gif) no-repeat center top;
-    background: center;
     background-size: cover;
     height: 100vh;
     
@@ -70,87 +69,116 @@ a{
     font-family: 'Open Sans', sans-serif;
 }
 .hide {
-    display: none;
+    display: none !important;
 }
+
+.show {
+    display: block !important;
+}
+
 
 /* desde aqui mi cara2 */
 
 .cara2{
-    padding: 10px;
-    margin: 5px;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    background: #ff7300;            
-}
-.mostrar{
-    background: #ffe585;
     display: block;
-    width: 158px;
-    height: 207px;
-    border: 2px solid #ffe585;
+    margin: auto;
+    /* padding: 0px; */
+    /* margin: 0px; */
+    background: #ff7300;
+    /* display: flex; */
+    text-align: center;          
+}
+.titulito{
+        /* display: flex; */
+    /* justify-content: space-evenly; */
+    align-items: center;
+    width: 570px;
+    height: 249px;
+}
+.selecionar{
+    align-items: center;
+    display: table-column;
+    font-size: 20px;
+    background: rgba(255, 255, 203, 0.85);
+    border-radius: 5px;
+    /* border: 8px; */
+    height: 58px;
+    width: 255px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
-    border-radius: 5px;
-    margin: 13px;
-    padding: 10px;
+    text-align: center;
+
+}
+.mostrar{
+    background: #ffe585d4;
+    width: 280px;
+    height: 210px;
+    border: 2px solid #ffd170;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 0px;
 }  
 img.sizeimg {
     width: 91px;
     height: 90px;
 }
 
-.titulito{
-    display: flex;
-    justify-content: flex-start;
-    width: 246px;
-    height: 133px;
-}
-.selecionar{
-    font-size: 13px;
-    background: rgba(255, 255, 203, 0.85);
-    border-radius: 5px;
-    height: 25px;
-    width: 56px;
+
+
+.info {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     text-align: center;
+    font-size: 24px;
+}
+.nomp {
+    font-size: 34px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
 }
 .pokeimg{
+    flex-wrap: wrap;
+    /* width: 100%; */
+    margin: 0px;
+    padding: 0px;
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    /* flex-flow: column; */
+    /* justify-content: center; */
+    align-items: center;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
 }
 .modal {
-    position: fixed;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(255, 255, 255); 
-    background-color: rgba(255, 255, 255, 0.6);
+    background-image: url(img/pokebolas.jpg);
+    padding: 149px;
+    margin: 284px;
+    border-radius: 21px;
+    background-repeat: no-repeat;
+    background-size: 1458px;
+    width: 622px;
+    height: 257px;
+    text-align: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
   }
   .modalcontenido {
     margin: auto;
-    padding: 0px;
-    border-radius: 21px;
-    background-image: url(img/pokebolas.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 679px;
-    height: 63%;
-    text-align: -webkit-center;
+    margin: auto;
+    height: 51px;
+    width: 323px;
+    display: unset;
   }
   .pokeke {
     font-weight: bold;
     font-size: 18px;
-    color: ghostwhite;
-    font-family: 'Open Sans', sans-serif;
-    border-radius: 3px;
-    border: 0px solid #49820d;
-    background: #45860c;
     width: 428px;
     margin: 0px;
     height: 33.2px;
@@ -187,4 +215,94 @@ img.sizeimg {
     color: black;
     text-decoration: none;
     cursor: pointer;
+  }
+
+
+
+  @media (max-width:759px){
+    body{
+        width: 100vh;
+    }
+ .loginbox{ 
+    display: flex;
+    background: url(img/giphy.gif) no-repeat center top;
+    background-size: cover;
+    height: 178vh;
+}
+    .selecionar {
+        font-size: 13px;
+        background: rgba(255, 255, 203, 0.85);
+        border-radius: 5px;
+        height: 30px;
+        width: 112px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        text-align: center;
+    }
+    .titulito {
+        justify-content: flex-start;
+        width: 296px;
+        height: 154px;
+    }
+    .mostrar {
+        background: #ffe585d6;
+        display: inline-block;
+        width: 226px;
+        height: 209px;
+        border: 2px solid #ffe585d6;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        border-radius: 5px;
+        margin: 20px;
+        padding: 9px;
+    }
+
+.modal {
+    background-image: url(img/pokebolas.jpg);
+    padding: 37px;
+    margin: 18px;
+    border-radius: 21px;
+    background-repeat: no-repeat;
+    background-size: 1377px;
+    width: 531px;
+    height: 555px;
+    text-align: center;
+}
+.modalcontenido {
+    margin: auto;
+    margin: auto;
+    height: 51px;
+    width: 323px;
+    display: unset;
+   
+}
+.imagenpoke {
+    width: 212px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.nombrep{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+.pokeke{ 
+    font-weight: bold;
+    font-size: 26px;
+    color: #161617;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 3px;
+    /* border: 0px solid #49820d; */
+    /* background: #45860c; */
+    /* width: 336px; */
+    margin: 4px;
+    /* height: 33.2px; */
+    display: flex;
+    /* justify-content: space-around; */
+    /* align-content: flex-end;
+}
   }
