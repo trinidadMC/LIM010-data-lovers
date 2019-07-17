@@ -89,15 +89,11 @@ const mostrarPokemones = (arrayPokemones) => {
   }
 };
 /*FUNCIONABILIDAD DE LOS HUEVOS*/
-const pokehuevos=document.getElementById('pokeegs');
-pokehuevos.addEventListener('change' , () => {
-  contenedor.innerHTML= mostrardata(eclociones(pokemones,pokehuevos.value));
-
-  const totalCount = pokehuevos.length;
-  contenedor.innerHTML = 'Resultados Encontrados' + totalCount;
- // html span promedio
- const promedio = totalCount / 151 * 100;
- contenedor.innerHTML = 'Porcentaje Total' + parseInt(promedio) + '%'; 
+const pokehuevos=document.getElementById("pokeegs");
+pokehuevos.addEventListener('change', () => {
+  const filtroHuevos = pokehuevos.value;
+  const pokemonesHuevos = huevos( pokemones, filtroHuevos);
+  contenedor.innerHTML = mostrardata(pokemonesHuevos);
 });
 
 const infopoke = document.getElementById('infopoke');
@@ -119,4 +115,5 @@ contenedor.addEventListener('click', () => {
 document.getElementById('cerrar').addEventListener('click', () => {
   document.getElementById('modalventana').classList.add('hide');
 });
+
 

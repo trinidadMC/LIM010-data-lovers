@@ -88,26 +88,12 @@ Puedes arreglar esto proporcionando una función de comparación*/
       return element.weaknesses.indexOf(debilidadesp) > -1;
       });
     };
-    const eclociones =(pokemones,huevos)=> {
-      return pokemones.filter((element) =>{
-      return element.egg.indexOf(huevos) > -1;
+    /* funcionabilidad de los huevos */
+    const huevos = (pokemones, condicion) => {
+      return pokemones.filter((element) => {
+        return element.egg.indexOf(condicion) > -1;
       });
     };
-    console.log(eclociones);
-    /*FILTRANDO POR HUEVOS*/ 
-     /*const filterEgg = (data, kms) => {
-     let egg = [];
-     if (kms === '2 km') {
-     egg = data.filter(pokemon => (pokemon.egg === '2 km'));
-       } else if (kms === '5 km') {
-        egg = data.filter(pokemon => (pokemon.egg === '5 km'));
-        } else if (kms === '10 km') {
-          egg = data.filter(pokemon => (pokemon.egg === '10 km'));
-        } else if (kms === 'Not in Eggs') {
-           egg = data.filter(pokemon => (pokemon.egg === 'Not in Eggs'));
-        }
-        return egg;
-     };*/
     
 
     window.pokemon= {
@@ -117,7 +103,7 @@ Puedes arreglar esto proporcionando una función de comparación*/
       ordenpoder:ordenpoder,
       poketypos: poketypos,
       pokedebilidades: pokedebilidades,
-      eclociones: eclociones
+      huevos: huevos
     };
 
    
