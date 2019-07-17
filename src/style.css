@@ -15,18 +15,18 @@ a{
 
 .loginbox{
     display: flex;
-    background: url(img/giphy.gif) no-repeat center top;                
+    background: url(img/giphy.gif) no-repeat center top;
     background-size: cover;
     height: 100vh;
     
 }
 .box{
     margin: auto;
-    display: flex; 
+    display: flex;
     flex-flow: column wrap;
     align-content: center;
     width: 260px;
-    padding: 50px;
+    padding: 20px;
     background: rgba(248, 246, 246, 0.623);
     border-radius: 4px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, .50);
@@ -69,106 +69,252 @@ a{
     font-family: 'Open Sans', sans-serif;
 }
 .hide {
-    display: none;
+    display: none !important;
 }
+
+.show {
+    display: block !important;
+}
+
+
+/* desde aqui mi cara2 */
 
 .cara2{
-    background: rgb(255, 200, 1);           
-    background-size: cover;
+    margin: auto;
+    /* padding: 0px; */
+    /* margin: 0px; */
+    background: #ff7300;
+    /* display: flex; */
+    text-align: center;          
 }
-.pokeimg{
-    text-align: center;
-    background-color: #ff9700;
-}
-.mostrar{
-
-        background: #ffe585;
-        display: inline-block;
-        width: 250px;
-        border: 2px solid #ffe585;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: bold;
-        border-radius: 5px;
-        margin: 10px;
+.titulito{
+        /* display: flex; */
+    /* justify-content: space-evenly; */
+    align-items: center;
+    width: 570px;
+    height: 249px;
 }
 .selecionar{
-    font-size: 17px;
+    align-items: center;
+    display: table-column;
+    font-size: 20px;
     background: rgba(255, 255, 203, 0.85);
     border-radius: 5px;
-    height: 41px;
-    width: 230px;
+    /* border: 8px; */
+    height: 58px;
+    width: 255px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     text-align: center;
-    
+
 }
-.cajabotones{
-    background: url(img/fondopoke.jpg)no-repeat;
-    width: 100%;
-    background-size: cover;
-    height: 850px;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+.mostrar{
+    background: #ffe585d4;
+    width: 280px;
+    height: 210px;
+    border: 2px solid #ffd170;
     font-family: 'Open Sans', sans-serif;
-    border-radius: 5px;
-    border: 1px solid #ffc801
+    font-weight: bold;
+    border-radius: 15px;
+    margin: 9px;
+    padding: 0px;
+    display: table-row;
+    justify-content: space-evenly;
+}  
+img.sizeimg {
+    width: 91px;
+    height: 90px;
 }
 
-.modal {
 
+
+.info {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+}
+.nomp {
+    font-size: 34px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+.pokeimg{
+    flex-wrap: wrap;
+    /* width: 100%; */
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    /* flex-flow: column; */
+    /* justify-content: center; */
+    align-items: initial;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    margin: 0px;
+    padding: 21px;
+}
+.modal {
+    background-image: url(img/pokebolas.jpg);
+    padding: 0;
+    margin: 0;
+    border-radius: 21px;
+    background-repeat: no-repeat;
+    background-size: 1458px;
+    width: 675px;
+    height: 592px;
+    text-align: center;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
     position: fixed;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(255, 255, 255); 
-    background-color: rgba(255, 255, 255, 0.6);
+    left: 375px;
+    top: 72px;
+    right: 0px;
 
   }
   .modalcontenido {
-    margin: auto;
-    padding: 0px;
-    border-radius: 32px;
-    background-image: url(img/pokebolas.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 580px;
-    height: 87%;
-    text-align: -webkit-center;
+    margin: 124px;
+    height: 523px;
   }
-
-    .imagenModal{
-        
-        width: 32%;
-        height: 29%;
-        margin: -10px;
-    }
-    .pokeke {
-       font-weight: bold;
-        color: ghostwhite;
-        font-family: 'Open Sans', sans-serif;
-        border-radius: 5px;
-        border: 0px solid #49820d;
-        background: #45860c;
-        width: 499px;
-        margin: 0px;
-        height: 31.2px;
-        display: flex;
-        justify-content: space-around;
-        align-content: flex-end;
-        padding: 0px
+  .pokeke {
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 24px;
+    width: 428px;
+    margin: 0px;
+    height: 33.2px;
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-end;
+    padding: 0px;
 }
-    
-  .cerrar {
+.imagenModal{
+        
+    width: 32%;
+    height: 29%;
+    margin: -10px;
+}
+.imagenpoke{
+    width: 212px;
+    justify-content: center;
+    align-items: center;
+}
+.logomodal{
+    display: flex;
+    justify-content: flex-start;
+    width: 315px;
+    height: 98px;
+}
+.cerrar {
     color: white;
     float: right;
-    font-size: 50px;
-    cursor: pointer
+    font-size: 84px;
+    cursor: pointer;
   }
   
   .cerrar:hover .cerrar:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
+  }
+/* ADAPTADO PARA MOVIL*/
+  @media (max-width:759px){
+    body{
+        width: 100vh;
+    }
+ .loginbox{ 
+    display: flex;
+    background: url(img/giphy.gif) no-repeat center top;
+    background-size: cover;
+    height: 178vh;
+}
+.selecionar {
+    font-size: 13px;
+    background: rgba(255, 255, 203, 0.85);
+    border-radius: 5px;
+    height: 30px;
+    width: 112px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    }
+.titulito {
+    justify-content: flex-start;
+    width: 296px;
+    height: 154px;
+    }
+.mostrar {
+    background: #ffe585d6;
+    display: inline-block;
+    width: 226px;
+    height: 209px;
+    border: 2px solid #ffe585d6;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 9px;
+    }
+ .imagenpoke {
+    width: 203px;
+    display: unset;
+    justify-content: center;
+    align-items: center;
+    }
+
+.modal {
+    background-image: url(img/pokebolas.jpg);
+    padding: 0;
+    margin: 0px;
+    border-radius: 21px;
+    background-repeat: no-repeat;
+    background-size: 1178px;
+    position: absolute;
+    top: 228px;
+    left: 37px;
+    /* right: -322px; */
+    /* right: 564px; */
+    width: 555px;
+    height: 557px;
+    text-align: center;
+}
+.modalcontenido {
+    margin: 0px;
+    padding: 0px;
+    height: 538px;
+    width: 516px;
+    display: table-row;
+    text-align: center;
+   
+}
+.nombrep{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+.pokeke{ 
+    font-weight: bold;
+    font-size: 25px;
+    color: #161617;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 3px;
+    margin: 0px;
+    display: inline-table;
+    justify-content: center;
+    
+}
+.logomodal {
+    margin: 0px;
+    display: unset;
+    justify-content: center;
+    width: 315px;
+    height: 98px;
+}
   }

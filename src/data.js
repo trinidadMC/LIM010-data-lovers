@@ -13,10 +13,10 @@ const datapokemon = (pokemon) => {
 };
 
 /*ORDENANDO LOS POKEMONES DE LA A-Z*/
-const ordenaz = document.getElementById("ordenAZ");
+const ordenaz = document.getElementById('ordenAZ');
 const ordenaAZ = () => {
   nombrePokemones = [];
-  const ordenador = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "W", "X", "Y", "Z"];
+  const ordenador = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'W', 'X', 'Y', 'Z'];
   for (let i = 0; i < ordenador.length; i++) {
     for (let Z = 0; Z < pokemones.length; Z++) {
       if (ordenador[i] === pokemones[Z].name[0]) {
@@ -59,8 +59,8 @@ const poketypos = (pokemones,tiposp ) => {
 /*El método sort () ordena una matriz alfabéticamente:*/
 /*The reverse() method reverses the elements in an array.*/
 /*Por defecto, la función sort () ordena los valores como cadenas.
-Sin embargo, si los números se ordenan como cadenas, "25" es más grande 
-que "100", porque "2" es más grande que "1".
+Sin embargo, si los números se ordenan como cadenas, '25' es más grande 
+que '100', porque '2' es más grande que '1'.
 Debido a esto, el método sort () producirá un resultado incorrecto al ordenar los números.
 Puedes arreglar esto proporcionando una función de comparación*/
 
@@ -88,26 +88,12 @@ Puedes arreglar esto proporcionando una función de comparación*/
       return element.weaknesses.indexOf(debilidadesp) > -1;
       });
     };
-    const eclociones =(pokemones,huevos)=> {
-      return pokemones.filter((element) =>{
-      return element.egg.indexOf(huevos) > -1;
+    /* funcionabilidad de los huevos */
+    const huevos = (pokemones, condicion) => {
+      return pokemones.filter((element) => {
+        return element.egg.indexOf(condicion) > -1;
       });
     };
-    console.log(eclociones);
-    /*FILTRANDO POR HUEVOS*/ 
-     /*const filterEgg = (data, kms) => {
-     let egg = [];
-     if (kms === '2 km') {
-     egg = data.filter(pokemon => (pokemon.egg === '2 km'));
-       } else if (kms === '5 km') {
-        egg = data.filter(pokemon => (pokemon.egg === '5 km'));
-        } else if (kms === '10 km') {
-          egg = data.filter(pokemon => (pokemon.egg === '10 km'));
-        } else if (kms === 'Not in Eggs') {
-           egg = data.filter(pokemon => (pokemon.egg === 'Not in Eggs'));
-        }
-        return egg;
-     };*/
     
 
     window.pokemon= {
@@ -117,7 +103,7 @@ Puedes arreglar esto proporcionando una función de comparación*/
       ordenpoder:ordenpoder,
       poketypos: poketypos,
       pokedebilidades: pokedebilidades,
-      eclociones: eclociones
+      huevos: huevos
     };
 
    
