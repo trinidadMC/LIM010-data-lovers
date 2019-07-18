@@ -1,10 +1,12 @@
-/*DECLRANDO LOS BOTONES DEL LOGIN Y DAR(LE FUNCIONABILIDAD*/
+/* DECLRANDO LOS BOTONES DEL LOGIN Y DAR(LE FUNCIONABILIDAD */
 const loginbox = document.getElementById('loginbox');
 const login = document.getElementById('login');
-const password = document.getElementById('contraseña');
+const password = document.getElementById('password');
 const buttonUno = document.getElementById('btn1');
 const error = document.getElementById('error');
 const interfaz2 = document.getElementById('interfaz2');
+const contenedor = document.getElementById('contenedor');
+const ordenaz = document.getElementById('ordenAZ');
 let contador = 0;
 buttonUno.addEventListener('click', () => {
   if (login.value && password.value === 'LABORATORIA') {
@@ -19,8 +21,7 @@ buttonUno.addEventListener('click', () => {
     error.innerHTML = 'contraseña incorrecta';
   }
 });
-/*LLAMANDO A MI DATA POKEMON DESDE DATA JS */
-const contenedor = document.getElementById('contenedor');
+/* LLAMANDO A MI DATA POKEMON DESDE DATA JS QUE APARECE EN LA SEGUNDA INTERFAZ */
 const pokemones = POKEMON.pokemon;
 const mostrardata = (pokemon) => {
   let mostrar = ' ';
@@ -38,56 +39,35 @@ const mostrardata = (pokemon) => {
 };
 contenedor.innerHTML = mostrardata(pokemones)
 
-/*FUNCIONABILDAD DE LOS POKEMONES POR ORDEN DE LA A-Z */
-ordenaz.addEventListener('change', () => {
-  if ('A-Z' === ordenaz.value) {
-    const ordenar = ordenaAZ();
+/* FUNCIONABILDAD DE LOS POKEMONES POR ORDEN DE LA A-Z */
+ordenador.addEventListener('change', () => {
+  if ('A-Z' === ordenador.value) {
+    const ordenar = azordena();
 
     contenedor.innerHTML = mostrardata(ordenar);
   }
 });
-/*FUNCIONABILIDAD POR ORDEN DE LA Z-A*/
-ordenaz.addEventListener('change', () => {
-  if ('Z-A' === ordenaz.value) {
-    const desord = ordenaZA();
+/* FUNCIONABILIDAD POR ORDEN DE LA Z-A */
+ordenador.addEventListener('change', () => {
+  if ('Z-A' === ordenador.value) {
+    const desord = zaordena();
     contenedor.innerHTML = mostrardata(desord);
   }
 });
-/*HACIENOD LAS FUNCIONABILIDADA DE LOS POKEMONES POR DEBILIDADES*/
+/* HACIENOD LAS FUNCIONABILIDADA DE LOS POKEMONES POR DEBILIDADES */
 porweakness.addEventListener('change', () => {
 contenedor.innerHTML= mostrardata(pokedebilidades(pokemones,porweakness.value));
 });
-/*HACIENOD LAS FUNCIONABILIDAD DE LOS POKEMONES POR TIPOS*/
-Tipos.addEventListener('change', () => {
-  contenedor.innerHTML= mostrardata(poketypos(pokemones,Tipos.value));
+/* HACIENOD LAS FUNCIONABILIDAD DE LOS POKEMONES POR TIPOS */
+tipos.addEventListener('change', () => {
+  contenedor.innerHTML= mostrardata(poketypos(pokemones,tipos.value));
   });
-// asc y desc
- // const newarray = mostrardata(window.pokemon.ordenpoder(pokemones,sorAsc.value));
-  // const NewOrden = ordenpoder(pokemones,ordenascend.value);
-  // contenedor.innerHTML = mostrardata(NewOrden);
+/* HACIENDPO LA FUNCIONABILIDAD DE LOS POKEMONES POR APARICIONES */
 const ordenascend = document.getElementById('porspawn');
 ordenascend.addEventListener('change' , () => {
   contenedor.innerHTML = mostrardata(ordenpoder(pokemones,ordenascend.value));
 
 });
-
-/* Funcion de mostrar pokemones*/
-const mostrarPokemones = (arrayPokemones) => {
-  contenedor.innerHTML = '';
-  for (let i = 0; i < arrayPokemones.length; i++) {
-    const numero = arrayPokemones[i].num;
-    const id = arrayPokemones[i].id;
-    const nombre = arrayPokemones[i].name;
-    const imagen = arrayPokemones[i].img;
-    contenedor.innerHTML += `
-    <div class='poke' name='pokemon' id=${id}>
-    <p class ='nombrep'> ${numero} </p>
-    <p class ='nombrep'> ${nombre} </p>
-    <img src='${imagen}'/>
-    <p>${id}</p>
-    </div>`;
-  }
-};
 /*FUNCIONABILIDAD DE LOS HUEVOS*/
 const pokehuevos=document.getElementById("pokeegs");
 pokehuevos.addEventListener('change', () => {
@@ -95,7 +75,7 @@ pokehuevos.addEventListener('change', () => {
   const pokemonesHuevos = huevos( pokemones, filtroHuevos);
   contenedor.innerHTML = mostrardata(pokemonesHuevos);
 });
-
+/* HACIENDO LA FUNCIONABILIDAD DE MOSTRAR LOS POKEMONES EN EL MODAL */
 const infopoke = document.getElementById('infopoke');
 contenedor.addEventListener('click', () => {
   const pokecito = parseInt(event.target.parentElement.getAttribute('id')- 1);{

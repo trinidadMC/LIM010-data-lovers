@@ -82,9 +82,10 @@ a{
 .cara2{
     margin: auto;
     background-image: url(img/01.gif);
-    background-repeat: repeat-y;
-    background-size: contain;
-    text-align: center;         
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;        
 }
 .titulito{
     align-items: center;
@@ -106,7 +107,7 @@ a{
 
 }
 .mostrar{
-    background: #ffe585d4;
+    background: #ffe5858f;
     width: 280px;
     height: 210px;
     border: 2px solid #ffd170;
@@ -139,14 +140,11 @@ img.sizeimg {
 }
 .pokeimg{
     flex-wrap: wrap;
-    /* width: 100%; */
     margin: 0px;
     padding: 0px;
     justify-content: center;
     display: flex;
     align-items: center;
-    /* flex-flow: column; */
-    /* justify-content: center; */
     align-items: initial;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
@@ -160,16 +158,15 @@ img.sizeimg {
     margin: 0;
     border-radius: 21px;
     background-repeat: no-repeat;
-    background-size: 1458px;
-    width: 675px;
-    height: 592px;
+    background-size: 1199px;
+    width: 602px;
+    height: 573px;
     text-align: center;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     position: fixed;
-    left: 375px;
-    top: 72px;
+    left: 412px;
+    top: 81px;
     right: 0px;
 
   }
@@ -218,6 +215,11 @@ img.sizeimg {
     text-decoration: none;
     cursor: pointer;
   }
+  .piecito {
+    text-align: center;
+    font-size: 37px;
+    font-family: cursive;
+  }
 /* ADAPTADO PARA MOVIL*/
   @media (max-width:759px){
     body{
@@ -228,6 +230,15 @@ img.sizeimg {
     background: url(img/giphy.gif) no-repeat center top;
     background-size: cover;
     height: 178vh;
+}
+.cara2{
+    margin: auto;
+    background-image: url(img/01.gif);
+    background-attachment: fixed;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
 }
 .selecionar {
     font-size: 13px;
@@ -314,4 +325,9 @@ img.sizeimg {
     width: 315px;
     height: 98px;
 }
+.piecito {
+    text-align: center;
+    font-size: 37px;
+    font-family: cursive;
+  }
   }
