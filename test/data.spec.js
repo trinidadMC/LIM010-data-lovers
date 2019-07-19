@@ -1,9 +1,8 @@
 global.window = global;
-global.assert = require('chai').assert;
 require('../src/data');
 require('./data.spec.js');
 
-const pokemon = [{
+const dataPokemon = [{
   "id": 1,
   "num": "001",
   "name": "Bulbasaur",
@@ -87,13 +86,12 @@ const pokemon = [{
 
 
 describe('azordena', () => {
-  
   it('debería ser una función', () => {
-    expect(typeof azordena).toEqual('funcion');
+    expect(typeof pokemon.azordena).toBe('function');
   });
 
-  it('debería retornar de A-Z', () => {
-    expect(azordena('pokemonesnombres',pokemon)[0].name).toEqual('Ekans');
+  it('debería retornar un array de objetos ordenado de la A-Z', () => {
+    expect(pokemon.azordena(dataPokemon)[0].name).toEqual('Bulbasaur');
   });
 
 })

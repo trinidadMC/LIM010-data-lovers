@@ -1,7 +1,7 @@
 
 /*TRAYENDO LOS POKEMONES DE LA DATA*/
-const datapokemon = (pokemon) => {
-  const vacio = [];
+const dataPokemon = (pokemon) => {
+  const arrayNew = [];
   for (let i = 0; i < pokemon.lenght; i++);
   vacio.push({
     img: pokemon[i].img,
@@ -9,11 +9,29 @@ const datapokemon = (pokemon) => {
     numero: pokemon[i].num,
     tipospokes: pokemon[i].type,
   });
-  return vacio;
+  return arrayNew;
 };
 
 /* ORDENANDO LOS POKEMONES DE LA A-Z */
-const azordena = () => {
+const azordena = (ordenar,desordenar) => {
+  const newArray = ordenar.sort((orden,desorden) => {
+    if(orden.name > desorden.name){
+      return 1;
+    } if(orden.name < desorden.name){
+      return -1;
+    }
+  return 0;
+  });
+  if (desordenar === '0') {
+    return newArray;
+  }
+  if (desordenar === '1') {
+    return newArray.reverse();
+  }
+  return 0;
+}
+
+/*
   nombrePokemones = [];
   const ordenador = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'W', 'X', 'Y', 'Z'];
   for (let i = 0; i < ordenador.length; i++) {
@@ -26,7 +44,7 @@ const azordena = () => {
 
   } return nombrePokemones;
 };
-/*ORDENANDO LOS POKEMONES DE LA Z-A*/
+ORDENANDO LOS POKEMONES DE LA Z-A
 const zaordena = () => {
   pokemonesnombre = [];
   const desordenar = ['Z', 'Y', 'X', 'W', 'V', 'U', 'T', 'S', 'R', 'Q', 'P', 'O', 'N', 'M', 'L', 'K', 'J', 'I', 'H', 'G', 'F', 'E', 'D', 'C', 'B', 'A'];
@@ -37,7 +55,7 @@ const zaordena = () => {
       };
     }
   } return pokemonesnombre;
-};
+};*/
 /* FILTRANNDO LOS POKEMONES POR TIPOS
 El método filter () crea una matriz rellena con todos 
 los elementos de la matriz que pasan una prueba (proporcionada como una función).
@@ -69,7 +87,7 @@ const ordenpoder = (datapoke, clickOrder) => {
       return -1;
     }
     return 0;
-  });
+   });
   if (clickOrder === '0') {
     return arrSorpokemon;
   }
@@ -94,9 +112,8 @@ const huevos = (pokemones, condicion) => {
 
 
 window.pokemon = {
-  datapokemon: datapokemon,
+  dataPokemon: dataPokemon,
   azordena: azordena,
-  zaordena: zaordena,
   ordenpoder: ordenpoder,
   poketypos: poketypos,
   pokedebilidades: pokedebilidades,

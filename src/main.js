@@ -6,7 +6,7 @@ const buttonUno = document.getElementById('btn1');
 const error = document.getElementById('error');
 const interfaz2 = document.getElementById('interfaz2');
 const contenedor = document.getElementById('contenedor');
-const ordenaz = document.getElementById('ordenAZ');
+const ordenador = document.getElementById("ordenador");
 let contador = 0;
 buttonUno.addEventListener('click', () => {
   if (login.value && password.value === 'LABORATORIA') {
@@ -23,7 +23,7 @@ buttonUno.addEventListener('click', () => {
 });
 /* LLAMANDO A MI DATA POKEMON DESDE DATA JS QUE APARECE EN LA SEGUNDA INTERFAZ */
 const pokemones = POKEMON.pokemon;
-const mostrardata = (pokemon) => {
+const mostrarData = (pokemon) => {
   let mostrar = ' ';
   for (let i = 0; i < pokemon.length; i++) {
     let llamar = `
@@ -37,35 +37,24 @@ const mostrardata = (pokemon) => {
   }
   return mostrar;
 };
-contenedor.innerHTML = mostrardata(pokemones)
+contenedor.innerHTML = mostrarData(pokemones)
 
 /* FUNCIONABILDAD DE LOS POKEMONES POR ORDEN DE LA A-Z */
 ordenador.addEventListener('change', () => {
-  if ('A-Z' === ordenador.value) {
-    const ordenar = azordena();
-
-    contenedor.innerHTML = mostrardata(ordenar);
-  }
-});
-/* FUNCIONABILIDAD POR ORDEN DE LA Z-A */
-ordenador.addEventListener('change', () => {
-  if ('Z-A' === ordenador.value) {
-    const desord = zaordena();
-    contenedor.innerHTML = mostrardata(desord);
-  }
+  contenedor.innerHTML = mostrarData(azordena(pokemones,ordenador.value));
 });
 /* HACIENOD LAS FUNCIONABILIDADA DE LOS POKEMONES POR DEBILIDADES */
 porweakness.addEventListener('change', () => {
-contenedor.innerHTML= mostrardata(pokedebilidades(pokemones,porweakness.value));
+contenedor.innerHTML= mostrarData(pokedebilidades(pokemones,porweakness.value));
 });
 /* HACIENOD LAS FUNCIONABILIDAD DE LOS POKEMONES POR TIPOS */
 tipos.addEventListener('change', () => {
-  contenedor.innerHTML= mostrardata(poketypos(pokemones,tipos.value));
+  contenedor.innerHTML= mostrarData(poketypos(pokemones,tipos.value));
   });
 /* HACIENDPO LA FUNCIONABILIDAD DE LOS POKEMONES POR APARICIONES */
 const ordenascend = document.getElementById('porspawn');
 ordenascend.addEventListener('change' , () => {
-  contenedor.innerHTML = mostrardata(ordenpoder(pokemones,ordenascend.value));
+  contenedor.innerHTML = mostrarData(ordenpoder(pokemones,ordenascend.value));
 
 });
 /*FUNCIONABILIDAD DE LOS HUEVOS*/
@@ -73,7 +62,7 @@ const pokehuevos=document.getElementById("pokeegs");
 pokehuevos.addEventListener('change', () => {
   const filtroHuevos = pokehuevos.value;
   const pokemonesHuevos = huevos( pokemones, filtroHuevos);
-  contenedor.innerHTML = mostrardata(pokemonesHuevos);
+  contenedor.innerHTML = mostrarData(pokemonesHuevos);
 });
 /* HACIENDO LA FUNCIONABILIDAD DE MOSTRAR LOS POKEMONES EN EL MODAL */
 const infopoke = document.getElementById('infopoke');
@@ -95,5 +84,3 @@ contenedor.addEventListener('click', () => {
 document.getElementById('cerrar').addEventListener('click', () => {
   document.getElementById('modalventana').classList.add('hide');
 });
-
-
