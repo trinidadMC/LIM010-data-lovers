@@ -8,19 +8,19 @@
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<header></header>
+<header class="head"> WELCOME TO POKELOVERS DATA</header>
 
 <body>
-  <!--PRIMERA INTERFAZ LLAMADA LOGING-->
+  <!-- PRIMERA INTERFAZ LLAMADA LOGING -->
 
   <main>
     <section id="loginbox" class="loginbox">
       <form class="box">
         <img class="logo-pokemon" src="./img/pokelovers.png" alt="logo">
-        <label class="user letra" for="">User</label>
-        <input type="text" id="login" class="data" value="LABORATORIA">
-        <label class="contra letra" for="">Password</label>
-        <input type="password" id="contrasena" class="data" value="LABORATORIA">
+        <label class="user letra">User</label>
+        <input type="text" id="login" class="data">
+        <label class="contra letra">Password</label>
+        <input type="password" id="password" class="data">
         <a class="right letra" href="https://es-la.facebook.com/help/374104332645037?helpref=faq_content">¿Olvidaste tu
           cotraseña?</a>
         <section id="error"></section>
@@ -29,17 +29,17 @@
             href="https://es-la.facebook.com/help/374104332645037?helpref=faq_content">Registrate</a> </p>
       </form>
     </section>
-    <!---SEGUNDA INTERFAZ POKEMON-->
+    <!-- SEGUNDA INTERFAZ POKEMON -->
     <section id="interfaz2" class="cara2 hide">
-      <img alt="imgdatalovers" class="titulito" src="img/datalovers.png">
-      <div class="btnselec">
-      <select id="tipos"  class="selecionar">
-        <option value="">Tipo de Pokemon</option>
-        <option value="Grass">Grass &#127811;</option>
-        <option value="Poison">Poison &#128126;</option>
-        <option value="Fire">Fire &#127879;</option>
-        <option value="Normal">Normal &#128304;</option>
-        <option value="Psychic">Psychic &#128302;</option>
+      <img src="img/datalovers.png" class="titulito" alt="logodos">
+      <div>
+        <select id="tipos" class="selecionar">
+          <option value="0">Tipo de Pokemon</option>
+          <option value="Grass">Grass &#127811;</option>
+          <option value="Poison">Poison &#128126;</option>
+          <option value="Fire">Fire &#127879;</option>
+          <option value="Normal">Normal &#128304;</option>
+          <option value="Psychic">Psychic &#128302;</option>
           <option value="Dragon">Dragon &#128009;</option>
           <option value="Electric">Electric &#128165;</option>
           <option value="Ice">Ice &#128142;</option>
@@ -49,41 +49,43 @@
           <option value="Water">Water &#128167;</option>
           <option value="Ghost">Ghost &#128123;</option>
           <option value="Flying">Flying &#128168;</option>
-      </select>
-      <select id="ordenalf" class="selecionar">
-        <option value="Ordenar por">Ordena por</option>
-        <option>A-Z</option>
-        <option>Z-A</option>
-      </select>
-      <select id="porspawn" class="selecionar">
-        <option>Frecuencia de Aparición</option>
-        <option value="1">Mayor a menor &#128315;</option>
-        <option value="0">Menor a mayor &#128314;</option>
-      </select>
-      <select id="porweakness" class="selecionar">
-        <option>Debilidades</option>
-        <option value="Grass">Grass &#127811;</option>
-        <option value="Poison">Poison &#128126;</option>
-        <option value="Fire">Fire &#127879;</option>
-        <option value="Normal">Normal &#128304;</option>
-        <option value="Psychic">Psychic &#128302;</option>
-        <option value="Dragon">Dragon &#128009;</option>
-        <option value="Electric">Electric &#128165;</option>
-        <option value="Ice">Ice &#128142;</option>
-        <option value="Rock">Rock &#127761;</option>
-        <option value="Bug">Bug &#128027;</option>
-        <option value="Ground">Ground &#127792;</option>
-        <option value="Water">Water &#128167;</option>
-        <option value="Ghost">Ghost &#128123;</option>
-        <option value="Flying">Flying &#128168;</option>
-      </select>
-      <select id="pokeegs" class="selecionar">
-        <option>Huevos</option>
-        <option value="2 km">2km</option>
-        <option value="5 km">5km</option>
-        <option value="10 km">10km</option>
-        <option value="Not in Eggs ">Not in Eggs</option>
-      </select>
+        </select>
+        <select id="ordenador" class="selecionar">
+          <option>Ordena por</option>
+          <option value="0">A-Z</option>
+          <option value="1">Z-A</option>
+        </select>
+        <select id="porspawn" class="selecionar">
+          <option>Frecuencia de Aparición</option>
+          <option value="0">Mayor a menor &#128315;</option>
+          <option value="1">Menor a mayor &#128314;</option>
+        </select>
+        <select id="porweakness" class="selecionar">
+          <option value="0">Debilidades</option>
+          <option value="Grass">Grass &#127811;</option>
+          <option value="Poison">Poison &#128126;</option>
+          <option value="Fire">Fire &#127879;</option>
+          <option value="Normal">Normal &#128304;</option>
+          <option value="Psychic">Psychic &#128302;</option>
+          <option value="Dragon">Dragon &#128009;</option>
+          <option value="Electric">Electric &#128165;</option>
+          <option value="Ice">Ice &#128142;</option>
+          <option value="Rock">Rock &#127761;</option>
+          <option value="Bug">Bug &#128027;</option>
+          <option value="Ground">Ground &#127792;</option>
+          <option value="Water">Water &#128167;</option>
+          <option value="Ghost">Ghost &#128123;</option>
+          <option value="Flying">Flying &#128168;</option>
+        </select>
+        <select id="pokeegs" class="selecionar">
+          <option>Huevos</option>
+          <div class="cuenta" id="pokecuenta"> </div>
+          <div class="cuenta" id="promediototal"></div>
+          <option value="2 km">2km</option>
+          <option value="5 km">5km</option>
+          <option value="10 km">10km</option>
+          <option value="Not in Eggs ">Not in Eggs</option>
+        </select>
       </div>
       <div id="contenedor" class="pokeimg"></div>
     </section>
@@ -91,21 +93,18 @@
     <div id="modalventana" class="modal hide">
       <div id="modalcontenido" class="modalcontenido">
         <span class="cerrar" id="cerrar">&times;</span>
-        <p>
-          <img alt="imgpokedex" class="logomodal" src="img/pokedex.png">
-        </p>
+
+        <img class="logomodal" src="img/pokedex.png" alt="logomodal">
+
         <div class="modal-info" id="modal-info">
         </div>
       </div>
     </div>
-
   </main>
-
-
   <script src="./data/pokemon/pokemon.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
 </body>
-<footer class="piecito" > by trini and indira</footer>
+<footer class="piecito"> by trini and indira</footer>
 
 </html>
