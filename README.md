@@ -5,9 +5,6 @@
 - [Índice](#índice)
 - [Preámbulo](#preámbulo)
 - [Investigación UX](#investigación-ux)
-- [Consideraciones generales](#consideraciones-generales)
-- [Requerimientos del proyecto](#requerimientos-del-proyecto)
-- [Contenido de referencia](#contenido-de-referencia)
 
 ***
 
