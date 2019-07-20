@@ -20,7 +20,7 @@
         <label class="user letra" for="">User</label>
         <input type="text" id="login" class="data" value="LABORATORIA">
         <label class="contra letra" for="">Password</label>
-        <input type="password" id="contraseña" class="data" value="LABORATORIA">
+        <input type="password" id="contrasena" class="data" value="LABORATORIA">
         <a class="right letra" href="https://es-la.facebook.com/help/374104332645037?helpref=faq_content">¿Olvidaste tu
           cotraseña?</a>
         <section id="error"></section>
@@ -31,15 +31,15 @@
     </section>
     <!---SEGUNDA INTERFAZ POKEMON-->
     <section id="interfaz2" class="cara2 hide">
-      <img  class="titulito" src="img/datalovers.png">
+      <img alt="imgdatalovers" class="titulito" src="img/datalovers.png">
       <div class="btnselec">
-      <select id="Tipos"  class="selecionar">
+      <select id="tipos"  class="selecionar">
         <option value="">Tipo de Pokemon</option>
         <option value="Grass">Grass &#127811;</option>
         <option value="Poison">Poison &#128126;</option>
         <option value="Fire">Fire &#127879;</option>
         <option value="Normal">Normal &#128304;</option>
-        <optio value="Psychic">Psychic &#128302;</option>
+        <option value="Psychic">Psychic &#128302;</option>
           <option value="Dragon">Dragon &#128009;</option>
           <option value="Electric">Electric &#128165;</option>
           <option value="Ice">Ice &#128142;</option>
@@ -50,7 +50,7 @@
           <option value="Ghost">Ghost &#128123;</option>
           <option value="Flying">Flying &#128168;</option>
       </select>
-      <select id="ordenAZ" class="selecionar">
+      <select id="ordenalf" class="selecionar">
         <option value="Ordenar por">Ordena por</option>
         <option>A-Z</option>
         <option>Z-A</option>
@@ -79,8 +79,6 @@
       </select>
       <select id="pokeegs" class="selecionar">
         <option>Huevos</option>
-        <div class="cuenta"> <span id="pokecuenta"></span> </div>
-        <div class="cuenta"><img class="cuenta" src=" "> <span id="promediototal"></span> </div>
         <option value="2 km">2km</option>
         <option value="5 km">5km</option>
         <option value="10 km">10km</option>
@@ -89,12 +87,13 @@
       </div>
       <div id="contenedor" class="pokeimg"></div>
     </section>
+    <div id="porcentaje" class="porcentaje hide"></div>
     <div id="modalventana" class="modal hide">
       <div id="modalcontenido" class="modalcontenido">
         <span class="cerrar" id="cerrar">&times;</span>
-
-        <p><img  class="logomodal"src="img/pokedex.png"></p>
-
+        <p>
+          <img alt="imgpokedex" class="logomodal" src="img/pokedex.png">
+        </p>
         <div class="modal-info" id="modal-info">
         </div>
       </div>

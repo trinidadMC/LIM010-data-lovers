@@ -318,3 +318,11 @@ img.sizeimg {
     height: 98px;
 }
   }
+.porcentaje {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: #ff7300;
+    font-size: 34px;
+    font-family: bold;
+}
