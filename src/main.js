@@ -12,11 +12,9 @@ buttonUno.addEventListener('click', () => {
   if (login.value && password.value === 'LABORATORIA') {
     loginbox.classList.add('hide');
     interfaz2.classList.replace('hide', 'show');
-  }
-  else if (contador == 2) {
+  } else if (contador == 2) {
     error.innerHTML = 'intentaste 3 veces ya no puedes entrar a la pagina';
-  }
-  else {
+  } else {
     contador++
     error.innerHTML = 'contraseña incorrecta';
   }

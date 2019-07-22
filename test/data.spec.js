@@ -90,8 +90,8 @@ describe('azordena', () => {
     expect(typeof pokemon.azordena).toBe('function');
   });
 
-  it('debería retornar un array de objetos ordenado de la A-Z', () => {
-    expect(pokemon.azordena(dataPokemon)[0].name).toEqual('Bulbasaur');
+  it('debería retornar un array de objetos ordenado en forma alfabetica ', () => {
+    expect(azordena()[0].name).toEqual('Bulbasaur','Ekans');
   });
 
 })
