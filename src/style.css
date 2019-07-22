@@ -330,4 +330,16 @@ img.sizeimg {
     font-size: 37px;
     font-family: cursive;
   }
+<<<<<<< HEAD
   }
+=======
+  }
+  .porcentaje {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: #4b8d39;
+    font-size: 34px;
+    font-family: bold;
+}
+>>>>>>> f20cd6cbef70d461c91741e1856c95ad088a362d
