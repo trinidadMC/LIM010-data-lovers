@@ -1,16 +1,3 @@
-/* TRAYENDO LOS POKEMONES DE LA DATA */
-const dataPokemon = (pokemon) => {
-  const arrayNew = [];
-  for (let i = 0; i < pokemon.lenght; i++);
-  vacio.push({
-    img: pokemon[i].img,
-    nombre: pokemon[i].name,
-    numero: pokemon[i].num,
-    tipospokes: pokemon[i].type,
-  });
-  return arrayNew;
-};
-
 /* ORDENANDO LOS POKEMONES DE LA A-Z */
 const azordena = (ordenar, desordenar) => {
   const newArray = ordenar.sort((orden, desorden) => {
@@ -19,7 +6,6 @@ const azordena = (ordenar, desordenar) => {
     } if (orden.name < desorden.name) {
       return -1;
     }
-    return 0;
   });
   if (desordenar === '0') {
     return newArray;
@@ -27,7 +13,6 @@ const azordena = (ordenar, desordenar) => {
   if (desordenar === '1') {
     return newArray.reverse();
   }
-  return 0;
 };
 
 /*
@@ -78,12 +63,9 @@ Debido a esto, el método sort () producirá un resultado incorrecto al ordenar 
 Puedes arreglar esto proporcionando una función de comparación */
 const ordenpoder = (datapoke, clickOrder) => {
   const arrSorpokemon = datapoke.sort((ab, bc) => {
-    if (ab.avg_spawns > bc.avg_spawns) {
-      return 1;
-    } if (ab.avg_spawns < bc.avg_spawns) {
+    if (ab.avg_spawns < bc.avg_spawns) {
       return -1;
     }
-    return 0;
   });
   if (clickOrder === '0') {
     return arrSorpokemon;
@@ -91,7 +73,6 @@ const ordenpoder = (datapoke, clickOrder) => {
   if (clickOrder === '1') {
     return arrSorpokemon.reverse();
   }
-  return 0;
 };
 
 /* FILTRANNDO LOS POKEMONES POR DEBILIDADES */
@@ -109,7 +90,6 @@ const huevos = (pokemones, condicion) => {
 
 
 window.pokemon = {
-  dataPokemon: dataPokemon,
   azordena: azordena,
   ordenpoder: ordenpoder,
   poketypos: poketypos,
