@@ -45,5 +45,5 @@ Feedback:
 
 Realizado por:
 Indira Soto
-Trinidad Mejia
+Trinidad Mejias
 Estudiantes de LABORATORIA.
