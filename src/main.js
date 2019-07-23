@@ -1,4 +1,4 @@
-/* DECLRANDO LOS BOTONES DEL LOGIN Y DAR(LE FUNCIONABILIDAD */
+/* DECLARANDO LOS BOTONES DEL LOGIN Y DARLE FUNCIONABILIDAD */
 const loginbox = document.getElementById('loginbox');
 const login = document.getElementById('login');
 const password = document.getElementById('password');
