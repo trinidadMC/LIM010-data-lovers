@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-/* DECLRANDO LOS BOTONES DEL LOGIN Y DAR(LE FUNCIONABILIDAD */
-  const loginbox = document.getElementById('loginbox');
-  const login = document.getElementById('login');
-  const password = document.getElementById('password');
-  const buttonUno = document.getElementById('btn1');
-  const error = document.getElementById('error');
-  const interfaz2 = document.getElementById('interfaz2');
-  const contenedor = document.getElementById('contenedor');
-  const ordenador = document.getElementById("ordenador");
-  let contador = 0;
-  buttonUno.addEventListener('click', () => {
-    if (login.value && password.value === 'LABORATORIA') {
-      loginbox.classList.add('hide');
-      interfaz2.classList.replace('hide', 'show');
-    }
-    else if (contador == 2) {
-      error.innerHTML = 'intentaste 3 veces ya no puedes entrar a la pagina';
-    }
-    else {
-      contador++
-      error.innerHTML = 'contraseña incorrecta';
-    }
-  });
-  /* LLAMANDO A MI DATA POKEMON DESDE DATA JS QUE APARECE EN LA SEGUNDA INTERFAZ */
-  const pokemones = POKEMON.pokemon;
-  const mostrarData = (pokemon) => {
-    let mostrar = ' ';
-    for (let i = 0; i < pokemon.length; i++) {
-      let llamar = `
-=======
 /* DECLARANDO LOS BOTONES DEL LOGIN Y DARLE FUNCIONABILIDAD */
 const loginbox = document.getElementById('loginbox');
 const login = document.getElementById('login');
@@ -56,7 +25,6 @@ const mostrarData = (pokemon) => {
   let mostrar = ' ';
   for (let i = 0; i < pokemon.length; i++) {
     let llamar = `
->>>>>>> ea1543231c6ef3d8d2f39c60c1fe8e7f8e50c5f8
       <div class='mostrar' name='pokemon' id=${pokemon[i].id}>
       <p class='nomp'>${pokemon[i].name}</p>
         <img  class = 'sizeimg' src='${pokemon[i].img}'/>
