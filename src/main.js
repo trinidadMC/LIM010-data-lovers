@@ -31,43 +31,45 @@ const mostrarData = (pokemon) => {
         <p class='info'>${pokemon[i].num}</p>
         <P class='info'>${pokemon[i].type}</p>
       </div>`;
-      mostrar += llamar;
-    }
-    return mostrar;
-  };
-  contenedor.innerHTML = mostrarData(pokemones)
+    mostrar += llamar;
+  }
+  return mostrar;
+};
+contenedor.innerHTML = mostrarData(pokemones);
   
-  /* FUNCIONABILDAD DE LOS POKEMONES POR ORDEN DE LA A-Z */
-  ordenador.addEventListener('change', () => {
-    contenedor.innerHTML = mostrarData(azordena(pokemones,ordenador.value));
-  });
-  /* HACIENOD LAS FUNCIONABILIDADA DE LOS POKEMONES POR DEBILIDADES */
-  porweakness.addEventListener('change', () => {
-  contenedor.innerHTML= mostrarData(pokedebilidades(pokemones,porweakness.value));
-  });
-  /* HACIENOD LAS FUNCIONABILIDAD DE LOS POKEMONES POR TIPOS */
-  tipos.addEventListener('change', () => {
-    contenedor.innerHTML= mostrarData(poketypos(pokemones,tipos.value));
-    });
-  /* HACIENDPO LA FUNCIONABILIDAD DE LOS POKEMONES POR APARICIONES */
-  const ordenascend = document.getElementById('porspawn');
-  ordenascend.addEventListener('change' , () => {
-    contenedor.innerHTML = mostrarData(ordenpoder(pokemones,ordenascend.value));
-  
-  });
-  /*FUNCIONABILIDAD DE LOS HUEVOS*/
-  const pokehuevos=document.getElementById("pokeegs");
-  pokehuevos.addEventListener('change', () => {
-    const filtroHuevos = pokehuevos.value;
-    const pokemonesHuevos = huevos( pokemones, filtroHuevos);
-    contenedor.innerHTML = mostrarData(pokemonesHuevos);
-  });
-  /* HACIENDO LA FUNCIONABILIDAD DE MOSTRAR LOS POKEMONES EN EL MODAL */
-  const infopoke = document.getElementById('infopoke');
-  contenedor.addEventListener('click', () => {
-    const pokecito = parseInt(event.target.parentElement.getAttribute('id')- 1);{
-      document.getElementById('modalventana').classList.remove('hide');
-      document.getElementById('modal-info').innerHTML = `
+/* FUNCIONABILDAD DE LOS POKEMONES POR ORDEN DE LA A-Z */
+ordenador.addEventListener('change', () => {
+  contenedor.innerHTML = mostrarData(azordena(pokemones, ordenador.value));
+});
+/* HACIENOD LAS FUNCIONABILIDADA DE LOS POKEMONES POR DEBILIDADES */
+porweakness.addEventListener('change', () => {
+  contenedor.innerHTML = mostrarData(pokedebilidades(pokemones, porweakness.value));
+});
+/* HACIENOD LAS FUNCIONABILIDAD DE LOS POKEMONES POR TIPOS */
+tipos.addEventListener('change', () => {
+  contenedor.innerHTML = mostrarData(poketypos(pokemones, tipos.value));
+});
+/* HACIENDPO LA FUNCIONABILIDAD DE LOS POKEMONES POR APARICIONES */
+const ordenascend = document.getElementById('porspawn');
+ordenascend.addEventListener('change', () => {
+  contenedor.innerHTML = mostrarData(ordenpoder(pokemones, ordenascend.value));
+});
+
+/* FUNCIONABILIDAD DE LOS HUEVOS */
+const pokehuevos = document.getElementById('pokeegs');
+pokehuevos.addEventListener('change', () => {
+  const filtroHuevos = pokehuevos.value;
+  const pokemonesHuevos = huevos(pokemones, filtroHuevos);
+  porcentaje.classList.remove('hide');
+  porcentaje.innerHTML = `Pokemones que nacen de huevos de  ${pokehuevos.value} corresponden al ${((pokemonesHuevos.length) / 151 * 100).toFixed(2)}% de la region Kanto`;
+  contenedor.innerHTML = mostrarData(pokemonesHuevos);
+});
+/* HACIENDO LA FUNCIONABILIDAD DE MOSTRAR LOS POKEMONES EN EL MODAL */
+const infopoke = document.getElementById('infopoke');
+contenedor.addEventListener('click', () => {
+  const pokecito = parseInt(event.target.parentElement.getAttribute('id') - 1); {
+    document.getElementById('modalventana').classList.remove('hide');
+    document.getElementById('modal-info').innerHTML = `
       <img  class='imagenpoke' src='${POKEMON.pokemon[pokecito].img}'/>
       <p class='pokeke'>${POKEMON.pokemon[pokecito].name}</p>
       <p class='pokeke'>Peso: ${POKEMON.pokemon[pokecito].weight}</p> 
@@ -77,8 +79,8 @@ const mostrarData = (pokemon) => {
       <p class='pokeke'> Debilidades:  ${POKEMON.pokemon[pokecito].weaknesses}</p>
       <p class='pokeke'> Spawn Time:  ${POKEMON.pokemon[pokecito].spawn_time}</p>
        `;
-    }
-  });
-  document.getElementById('cerrar').addEventListener('click', () => {
-    document.getElementById('modalventana').classList.add('hide');
-  });
+  }
+});
+document.getElementById('cerrar').addEventListener('click', () => {
+  document.getElementById('modalventana').classList.add('hide');
+});
