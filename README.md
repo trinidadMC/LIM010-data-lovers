@@ -38,12 +38,12 @@ Contraseña: LABORATORIA
 ![prototipo baja fidelidad](https://user-images.githubusercontent.com/51206357/61594600-3b115c80-abb3-11e9-95d5-78ae6dc40211.jpg)
 Feedback: 
 - Sustituir imagen "pokelover" por un logo.
-- Hacer botones de la segunda cara más pequeños.
-- Realizar una ventana modal cuadrada.
+- Hacer botones  de tipo select de la segunda cara más pequeños.
+- Realizar una ventana modal cuadrada con border de radius.
 
 -Prototipo de alta fidelidad
 
 Realizado por:
 Indira Soto
-Trinidad 
+Trinidad Mejia
 Estudiantes de LABORATORIA.
